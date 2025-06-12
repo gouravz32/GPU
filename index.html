@@ -1,0 +1,2382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="Complete GPU database with 30+ NVIDIA RTX graphics cards. Compare specs, benchmarks, and prices. Find the best GPU for gaming, 4K, 1440p, and 1080p performance.">
+    <meta name="keywords" content="GPU database, NVIDIA RTX, graphics cards, GPU comparison, gaming performance, RTX 50 series, RTX 40 series, GPU benchmarks, PC building">
+    <meta name="author" content="Gourav Choudhary">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://gpudatabase.in/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gpudatabase.in/">
+    <meta property="og:title" content="GPU Database - Complete Graphics Card Guide | 30+ RTX Models">
+    <meta property="og:description" content="Explore 30+ NVIDIA RTX GPUs with detailed specs, performance benchmarks, and price comparisons. Find your perfect graphics card.">
+    <meta property="og:image" content="https://gpudatabase.in/img/og-image.jpg">
+    <meta property="og:site_name" content="GPU Database">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gpudatabase.in/">
+    <meta property="twitter:title" content="GPU Database - Complete Graphics Card Guide">
+    <meta property="twitter:description" content="Compare 30+ NVIDIA RTX graphics cards with specs, benchmarks, and prices">
+    <meta property="twitter:image" content="https://gpudatabase.in/img/twitter-image.jpg">
+    
+    <title>GPU Database - Complete Graphics Card Guide | 30+ RTX Models Compared</title>
+    
+    <!-- Preconnections for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//www.amazon.in">
+    
+    <!-- Chart.js for comparison charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "GPU Database",
+        "url": "https://gpudatabase.in",
+        "description": "Complete database of NVIDIA RTX graphics cards with specs, benchmarks, and comparisons",
+        "publisher": {
+            "@type": "Person",
+            "name": "Gourav Choudhary",
+            "email": "gouravchoudharyofficial@gmail.com"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://gpudatabase.in/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #00ff88;
+            --primary-blue: #00ccff;
+            --accent-orange: #ff8800;
+            --accent-red: #ff4444;
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Mobile-First Navigation */
+        .navbar {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            padding: 1rem;
+            gap: 0.5rem;
+            border-top: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            list-style: none;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-green);
+            background: rgba(0, 255, 136, 0.1);
+            transform: translateX(4px);
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-btn span {
+            width: 24px;
+            height: 3px;
+            background: var(--text-primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Hero Section - Mobile First */
+        .hero {
+            padding: 120px 1rem 40px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--text-primary), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: clamp(0.9rem, 4vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.5;
+        }
+
+        /* Search Container - Mobile Optimized */
+        .search-container {
+            max-width: 100%;
+            margin: 0 auto 2rem;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .search-bar:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 4px rgba(0, 255, 136, 0.2);
+        }
+
+        .search-bar::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Mobile-First Filters */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-align: center;
+            white-space: nowrap;
+            min-width: fit-content;
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-blue));
+            border-color: transparent;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        /* FIXED GPU Grid - Mobile First */
+        .gpu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+            width: 100%;
+            align-items: start;
+        }
+
+        /* FIXED GPU Card Layout - Fully Centered */
+        .gpu-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; /* Center all text content */
+        }
+
+        .gpu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-blue));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .gpu-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(0, 255, 136, 0.3);
+        }
+
+        .gpu-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .gpu-card.touch-active {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* FIXED GPU Header - Centered */
+        .gpu-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 0.5rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .gpu-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-align: center;
+            width: 100%;
+        }
+
+        .gpu-series {
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-blue));
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #000;
+            white-space: nowrap;
+        }
+
+        /* FIXED GPU Specs Grid - Centered */
+        .gpu-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            width: 100%;
+            justify-items: center;
+        }
+
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .spec-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        .spec-value {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* FIXED Performance Section - Centered */
+        .performance-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .performance-title {
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* FIXED FPS List - Perfectly Centered for Desktop */
+        .fps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+            align-items: center;
+        }
+
+        .fps-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.25rem 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .fps-item:last-child {
+            border-bottom: none;
+        }
+
+        .game-name {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-align: left;
+            flex: 1;
+        }
+
+        .fps-value {
+            color: var(--primary-green);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-align: right;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* FIXED Power Indicator - Centered */
+        .power-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: rgba(255, 136, 0, 0.1);
+            border-radius: 10px;
+            border-left: 3px solid var(--accent-orange);
+            width: 100%;
+            text-align: center;
+        }
+
+        .power-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            flex-shrink: 0;
+        }
+
+        .power-text {
+            flex: 1;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .power-consumption {
+            color: var(--accent-orange);
+            font-weight: 700;
+        }
+
+        .power-rating {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* FIXED GPU Card Footer - Centered */
+        .gpu-card-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        /* FIXED CTA Button - Consistent Size */
+        .cta-button {
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-blue));
+            color: #000;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: block;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 250px; /* Fixed width for consistency */
+            height: 45px; /* Fixed height for consistency */
+            line-height: 1.2;
+            margin: 1rem auto 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Loading States */
+        .loading-indicator {
+            display: none;
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--primary-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Special handling for exactly 2 cards */
+        .center-two-cards {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+            flex-wrap: wrap !important;
+            gap: 1.5rem !important;
+            max-width: 900px !important;
+            margin: 0 auto 4rem auto !important;
+            width: 100% !important;
+        }
+        
+        .center-two-cards .gpu-card {
+            flex: 0 0 100% !important;
+            max-width: 420px !important;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            margin: 3rem 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(45deg, var(--text-primary), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Ad Space */
+        .ad-space {
+            background: var(--card-bg);
+            border: 2px dashed var(--border-color);
+            border-radius: 10px;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin: 3rem 0;
+            color: var(--text-secondary);
+        }
+
+        .ad-space h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .ad-space p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 3rem 1rem 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .affiliate-disclosure {
+            background: rgba(255, 136, 0, 0.1);
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 136, 0, 0.3);
+        }
+
+        .affiliate-disclosure p {
+            color: var(--accent-orange);
+            font-size: 0.9rem;
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            .navbar {
+                padding: 1rem 2rem;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                position: static;
+                background: none;
+                flex-direction: row;
+                padding: 0;
+                gap: 1rem;
+                border: none;
+                box-shadow: none;
+            }
+
+            .nav-links a {
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+            }
+
+            .nav-links a:hover {
+                transform: none;
+            }
+
+            .hero {
+                padding: 140px 2rem 60px;
+            }
+
+            .search-container {
+                max-width: 600px;
+                padding: 0;
+            }
+
+            .filters {
+                padding: 0;
+                gap: 1rem;
+            }
+
+            .filter-btn {
+                font-size: 0.9rem;
+                padding: 0.7rem 1.2rem;
+            }
+
+            .gpu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                justify-items: center;
+            }
+
+            .gpu-card {
+                padding: 2rem;
+            }
+
+            .gpu-name {
+                font-size: 1.4rem;
+            }
+
+            /* FIXED: Desktop Gaming Performance Layout - Perfectly Centered */
+            .fps-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+                justify-items: center;
+                align-items: center;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .fps-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0.4rem 0.6rem;
+                width: 120px;
+                height: 50px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                text-align: center;
+                background: rgba(255, 255, 255, 0.02);
+                border-radius: 8px;
+            }
+
+            .game-name {
+                font-size: 0.75rem;
+                text-align: center;
+                margin-bottom: 0.2rem;
+                line-height: 1.1;
+            }
+
+            .fps-value {
+                font-size: 0.85rem;
+                text-align: center;
+                font-weight: 700;
+            }
+
+            .cta-button {
+                width: 280px;
+                height: 50px;
+                padding: 1rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            .center-two-cards .gpu-card {
+                flex: 0 0 calc(50% - 0.75rem) !important;
+                max-width: 420px !important;
+            }
+
+            .comparison-section {
+                padding: 2rem;
+            }
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 1024px) {
+            .gpu-grid {
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+            }
+
+            .filters {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                max-width: 1000px;
+                margin: 0 auto 3rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .gpu-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+                justify-items: center;
+            }
+        }
+
+        /* Focus Styles for Accessibility */
+        .filter-btn:focus,
+        .cta-button:focus,
+        .nav-links a:focus,
+        .search-bar:focus {
+            outline: 3px solid var(--primary-green);
+            outline-offset: 2px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Extra Small Mobile Screens */
+        @media (max-width: 360px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            
+            .gpu-card {
+                padding: 1rem;
+                min-width: 260px;
+                max-width: 95vw;
+            }
+            
+            .cta-button {
+                width: 220px;
+                height: 45px;
+                padding: 0.7rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="logo">GPU Database</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/#gpus" class="nav-link">Graphics Cards</a></li>
+                <li><a href="/#comparison" class="nav-link">Compare</a></li>
+                <li><a href="/#guides" class="nav-link">Guides</a></li>
+                <li><a href="/#news" class="nav-link">News</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Complete GPU Database</h1>
+        <p>Your ultimate resource for NVIDIA GeForce RTX graphics cards. Compare 30+ GPU models from RTX 20, 30, 40, and 50 series. Get detailed specs, real-world gaming performance, power consumption data, and find the perfect GPU for your needs.</p>
+        <p style="text-align: center; color: #ff4444; font-size: 0.9rem; margin-top: 1rem;">Note: RTX 50 series specs are based on leaks and may change upon official release.</p>
+        
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for GPU models, games, or specifications..." id="searchInput" aria-label="Search GPUs">
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All GPUs (30+ Models)</button>
+            <button class="filter-btn" data-filter="rtx-50">RTX 50 Series</button>
+            <button class="filter-btn" data-filter="rtx-40">RTX 40 Series</button>
+            <button class="filter-btn" data-filter="rtx-30">RTX 30 Series</button>
+            <button class="filter-btn" data-filter="rtx-20">RTX 20 Series</button>
+            <button class="filter-btn" data-filter="high-end">High-End ($800+)</button>
+            <button class="filter-btn" data-filter="mid-range">Mid-Range ($400-800)</button>
+            <button class="filter-btn" data-filter="budget">Budget (Under $400)</button>
+            <button class="filter-btn" onclick="sortGPUs('price')">Sort by Price</button>
+            <button class="filter-btn" onclick="sortGPUs('fps')">Sort by FPS</button>
+        </div>
+    </section>
+
+    <div class="container" id="gpus">
+        <div class="loading-indicator" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>Loading GPU data...</p>
+        </div>
+
+        <div class="gpu-grid" id="gpuGrid">
+            <!-- GPU cards will be dynamically generated -->
+        </div>
+
+        <div class="comparison-section" id="comparison">
+            <h2 class="section-title">GPU Database Statistics</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: center;">
+                <div style="background: rgba(0, 255, 136, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(0, 255, 136, 0.3);">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #00ff88;">30+</div>
+                    <div style="color: #ccc;">Total GPU Models</div>
+                </div>
+                <div style="background: rgba(0, 204, 255, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(0, 204, 255, 0.3);">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #00ccff;">4</div>
+                    <div style="color: #ccc;">RTX Generations</div>
+                </div>
+                <div style="background: rgba(255, 136, 0, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255, 136, 0, 0.3);">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #ff8800;">$249-$1999</div>
+                    <div style="color: #ccc;">Price Range</div>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.3);">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #ffffff;">115W-500W</div>
+                    <div style="color: #ccc;">Power Range</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Performance Comparison</h2>
+            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Compare graphics cards side by side to make informed decisions</p>
+            <canvas id="comparisonChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="ad-space">
+            <h3>Affiliate Links Section</h3>
+            <p>Best deals on graphics cards - shop now on Amazon!</p>
+            <a href="https://www.amazon.in/s?k=nvidia+rtx&tag=gpudatabase-21" target="_blank" class="cta-button">Explore Deals</a>
+        </div>
+
+        <!-- Guides Section -->
+        <section class="comparison-section" id="guides">
+            <h2 class="section-title">GPU Buying Guides</h2>
+            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Expert guides to help you choose the perfect graphics card</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div class="gpu-card">
+                    <h3 style="color: #00ff88; margin-bottom: 1rem;">🎮 Gaming GPU Guide 2025</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Choose the best GPU for 1080p, 1440p, and 4K gaming. Compare performance across different price ranges.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.9rem;">
+                        <div>• Budget Gaming: RTX 4060</div>
+                        <div>• 1440p Gaming: RTX 4070 SUPER</div>
+                        <div>• 4K Gaming: RTX 4080/4090</div>
+                        <div>• Future-Proof: RTX 5080/5090</div>
+                    </div>
+                </div>
+
+                <div class="gpu-card">
+                    <h3 style="color: #00ccff; margin-bottom: 1rem;">💡 Power Supply Guide</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Calculate the right PSU wattage for your GPU. Ensure stable power delivery and efficiency.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.9rem;">
+                        <div>• RTX 4060: 550W PSU</div>
+                        <div>• RTX 4070: 650W PSU</div>
+                        <div>• RTX 4080: 750W PSU</div>
+                        <div>• RTX 4090: 850W+ PSU</div>
+                    </div>
+                </div>
+
+                <div class="gpu-card">
+                    <h3 style="color: #ff8800; margin-bottom: 1rem;">🔧 Installation Guide</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Step-by-step GPU installation, driver setup, and optimization tips for maximum performance.</p>
+                    <div style="font-size: 0.9rem; color: #ccc;">
+                        <div>• Pre-installation checklist</div>
+                        <div>• Physical installation steps</div>
+                        <div>• Driver installation & updates</div>
+                        <div>• Performance optimization</div>
+                    </div>
+                </div>
+
+                <div class="gpu-card">
+                    <h3 style="color: #ff4444; margin-bottom: 1rem;">📊 Benchmark Guide</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Understanding GPU benchmarks, performance metrics, and real-world gaming tests.</p>
+                    <div style="font-size: 0.9rem; color: #ccc;">
+                        <div>• 3DMark benchmarks</div>
+                        <div>• Game-specific testing</div>
+                        <div>• Ray tracing performance</div>
+                        <div>• DLSS/FSR comparisons</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#guides" class="cta-button" onclick="showAllGuides()">View All Guides →</a>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="comparison-section" id="news">
+            <h2 class="section-title">Latest GPU News</h2>
+            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Stay updated with the latest graphics card releases and tech news</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <article class="gpu-card">
+                    <div style="background: linear-gradient(45deg, #00ff88, #00ccff); height: 4px; margin: -2rem -2rem 1rem -2rem;"></div>
+                    <div style="color: #00ff88; font-size: 0.8rem; margin-bottom: 0.5rem;">LATEST • June 9, 2025</div>
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">RTX 50 Series Launch: What We Know</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">NVIDIA's next-generation RTX 50 series promises revolutionary performance with GDDR7 memory and enhanced ray tracing capabilities.</p>
+                    <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: #999;">
+                        <span>• DLSS 4 Technology</span>
+                        <span>• Up to 32GB VRAM</span>
+                        <span>• PCIe 5.0 Support</span>
+                    </div>
+                </article>
+
+                <article class="gpu-card">
+                    <div style="background: linear-gradient(45deg, #ff8800, #ff4444); height: 4px; margin: -2rem -2rem 1rem -2rem;"></div>
+                    <div style="color: #ff8800; font-size: 0.8rem; margin-bottom: 0.5rem;">TRENDING • June 8, 2025</div>
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">GPU Prices Drop as New Generation Approaches</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">RTX 40 series sees significant price reductions ahead of RTX 50 launch. Great time for budget-conscious buyers.</p>
+                    <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: #999;">
+                        <span>• Up to 30% off</span>
+                        <span>• All retailers</span>
+                        <span>• Limited time</span>
+                    </div>
+                </article>
+
+                <article class="gpu-card">
+                    <div style="background: linear-gradient(45deg, #00ccff, #4488ff); height: 4px; margin: -2rem -2rem 1rem -2rem;"></div>
+                    <div style="color: #00ccff; font-size: 0.8rem; margin-bottom: 0.5rem;">REVIEW • June 7, 2025</div>
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">RTX 4070 SUPER vs RTX 4070 Ti: Which to Buy?</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Comprehensive comparison of NVIDIA's mid-range champions. Performance, price, and value analysis.</p>
+                    <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: #999;">
+                        <span>• Detailed benchmarks</span>
+                        <span>• Price comparison</span>
+                        <span>• Buying advice</span>
+                    </div>
+                </article>
+
+                <article class="gpu-card">
+                    <div style="background: linear-gradient(45deg, #8844ff, #ff44cc); height: 4px; margin: -2rem -2rem 1rem -2rem;"></div>
+                    <div style="color: #8844ff; font-size: 0.8rem; margin-bottom: 0.5rem;">TECH • June 6, 2025</div>
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">Ray Tracing in 2025: How Far We've Come</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">From RTX 20 series to RTX 50 series: The evolution of real-time ray tracing and its impact on gaming.</p>
+                    <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: #999;">
+                        <span>• Performance gains</span>
+                        <span>• Game support</span>
+                        <span>• Future outlook</span>
+                    </div>
+                </article>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#news" class="cta-button" style="background: linear-gradient(45deg, #00ccff, #4488ff);" onclick="showAllNews()">Read All News →</a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="affiliate-disclosure">
+                <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases. This helps us keep the site running and provide free GPU information.</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="advertise.html">Advertise</a>
+            </div>
+            <p>© 2025 GPU Database. All rights reserved. | The ultimate resource for 30+ graphics card models with comprehensive specs and performance data</p>
+        </div>
+    </footer>
+
+    <script>
+        // Complete GPU Database with all 30+ GPUs
+        const gpuDatabase = [
+            // RTX 50 Series (Upcoming/Leaked)
+            {
+                name: "RTX 5090",
+                series: "RTX 50",
+                category: "high-end",
+                specs: {
+                    memory: "32GB GDDR7",
+                    baseClock: "2400 MHz",
+                    boostClock: "2750 MHz",
+                    memoryBandwidth: "1536 GB/s",
+                    rtCores: "170",
+                    tensorCores: "680",
+                    powerConsumption: "500W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "120 FPS",
+                    "Call of Duty 4K": "165 FPS",
+                    "Fortnite 4K": "240 FPS",
+                    "Minecraft RTX 4K": "140 FPS"
+                },
+                features: ["Ray Tracing Gen 4", "DLSS 4", "AV1 Pro Encoding", "PCIe 5.0"],
+                price: "$1999",
+                powerRating: "Extreme",
+                amazonLink: "https://amzn.to/3HyI0LK"
+            },
+            {
+                name: "RTX 5080",
+                series: "RTX 50",
+                category: "high-end",
+                specs: {
+                    memory: "20GB GDDR7",
+                    baseClock: "2200 MHz",
+                    boostClock: "2600 MHz",
+                    memoryBandwidth: "960 GB/s",
+                    rtCores: "108",
+                    tensorCores: "432",
+                    powerConsumption: "380W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "95 FPS",
+                    "Call of Duty 4K": "135 FPS",
+                    "Fortnite 4K": "200 FPS",
+                    "Minecraft RTX 4K": "115 FPS"
+                },
+                features: ["Ray Tracing Gen 4", "DLSS 4", "AV1 Pro Encoding", "PCIe 5.0"],
+                price: "$1199",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/4dVZygF"
+            },
+            {
+                name: "RTX 5070 Ti",
+                series: "RTX 50",
+                category: "mid-range",
+                specs: {
+                    memory: "16GB GDDR7",
+                    baseClock: "2100 MHz",
+                    boostClock: "2500 MHz",
+                    memoryBandwidth: "672 GB/s",
+                    rtCores: "76",
+                    tensorCores: "304",
+                    powerConsumption: "300W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "105 FPS",
+                    "Call of Duty 1440p": "140 FPS",
+                    "Fortnite 1440p": "200 FPS",
+                    "Minecraft RTX 1440p": "120 FPS"
+                },
+                features: ["Ray Tracing Gen 4", "DLSS 4", "AV1 Encoding", "PCIe 5.0"],
+                price: "$799",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/45do0Il"
+            },
+            {
+                name: "RTX 5070",
+                series: "RTX 50",
+                category: "mid-range",
+                specs: {
+                    memory: "12GB GDDR7",
+                    baseClock: "2000 MHz",
+                    boostClock: "2400 MHz",
+                    memoryBandwidth: "504 GB/s",
+                    rtCores: "64",
+                    tensorCores: "256",
+                    powerConsumption: "250W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "85 FPS",
+                    "Call of Duty 1440p": "115 FPS",
+                    "Fortnite 1440p": "165 FPS",
+                    "Minecraft RTX 1440p": "100 FPS"
+                },
+                features: ["Ray Tracing Gen 4", "DLSS 4", "AV1 Encoding", "PCIe 5.0"],
+                price: "$599",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/43Svtu5"
+            },
+            {
+                name: "RTX 5060 Ti",
+                series: "RTX 50",
+                category: "mid-range",
+                specs: {
+                    memory: "12GB GDDR6",
+                    baseClock: "1900 MHz",
+                    boostClock: "2300 MHz",
+                    memoryBandwidth: "432 GB/s",
+                    rtCores: "48",
+                    tensorCores: "192",
+                    powerConsumption: "220W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "95 FPS",
+                    "Call of Duty 1080p": "130 FPS",
+                    "Fortnite 1080p": "180 FPS",
+                    "Minecraft RTX 1080p": "110 FPS"
+                },
+                features: ["Ray Tracing Gen 4", "DLSS 4", "AV1 Encoding", "PCIe 4.0"],
+                price: "$399",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/45ichs2"
+            },
+            {
+                name: "RTX 5060",
+                series: "RTX 50",
+                category: "budget",
+                specs: {
+                    memory: "8GB GDDR6",
+                    baseClock: "1800 MHz",
+                    boostClock: "2200 MHz",
+                    memoryBandwidth: "288 GB/s",
+                    rtCores: "32",
+                    tensorCores: "128",
+                    powerConsumption: "180W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "75 FPS",
+                    "Call of Duty 1080p": "105 FPS",
+                    "Fortnite 1080p": "150 FPS",
+                    "Minecraft RTX 1080p": "85 FPS"
+                },
+                features: ["Ray Tracing Gen 4", "DLSS 4", "AV1 Encoding", "PCIe 4.0"],
+                price: "$299",
+                powerRating: "Low",
+                amazonLink: "https://amzn.to/4jNi9Nw"
+            },
+
+            // RTX 40 Series
+            {
+                name: "RTX 4090",
+                series: "RTX 40",
+                category: "high-end",
+                specs: {
+                    memory: "24GB GDDR6X",
+                    baseClock: "2230 MHz",
+                    boostClock: "2520 MHz",
+                    memoryBandwidth: "1008 GB/s",
+                    rtCores: "128",
+                    tensorCores: "512",
+                    powerConsumption: "450W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "85 FPS",
+                    "Call of Duty 4K": "120 FPS",
+                    "Fortnite 4K": "165 FPS",
+                    "Minecraft RTX 4K": "95 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$1599",
+                powerRating: "Very High",
+                amazonLink: "https://amzn.to/3ZM82l1"
+            },
+            {
+                name: "RTX 4080 SUPER",
+                series: "RTX 40",
+                category: "high-end",
+                specs: {
+                    memory: "16GB GDDR6X",
+                    baseClock: "2295 MHz",
+                    boostClock: "2550 MHz",
+                    memoryBandwidth: "736 GB/s",
+                    rtCores: "80",
+                    tensorCores: "320",
+                    powerConsumption: "320W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "68 FPS",
+                    "Call of Duty 4K": "95 FPS",
+                    "Fortnite 4K": "130 FPS",
+                    "Minecraft RTX 4K": "75 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$999",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/4dVUZTB"
+            },
+            {
+                name: "RTX 4080",
+                series: "RTX 40",
+                category: "high-end",
+                specs: {
+                    memory: "16GB GDDR6X",
+                    baseClock: "2205 MHz",
+                    boostClock: "2505 MHz",
+                    memoryBandwidth: "717 GB/s",
+                    rtCores: "76",
+                    tensorCores: "304",
+                    powerConsumption: "320W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "62 FPS",
+                    "Call of Duty 4K": "88 FPS",
+                    "Fortnite 4K": "120 FPS",
+                    "Minecraft RTX 4K": "70 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$1199",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/3SLzzir"
+            },
+            {
+                name: "RTX 4070 Ti SUPER",
+                series: "RTX 40",
+                category: "mid-range",
+                specs: {
+                    memory: "16GB GDDR6X",
+                    baseClock: "2340 MHz",
+                    boostClock: "2610 MHz",
+                    memoryBandwidth: "672 GB/s",
+                    rtCores: "66",
+                    tensorCores: "264",
+                    powerConsumption: "285W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "95 FPS",
+                    "Call of Duty 1440p": "130 FPS",
+                    "Fortnite 1440p": "180 FPS",
+                    "Minecraft RTX 1440p": "110 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$799",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/45k1qxO"
+            },
+            {
+                name: "RTX 4070 Ti",
+                series: "RTX 40",
+                category: "mid-range",
+                specs: {
+                    memory: "12GB GDDR6X",
+                    baseClock: "2310 MHz",
+                    boostClock: "2610 MHz",
+                    memoryBandwidth: "504 GB/s",
+                    rtCores: "60",
+                    tensorCores: "240",
+                    powerConsumption: "285W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "88 FPS",
+                    "Call of Duty 1440p": "125 FPS",
+                    "Fortnite 1440p": "165 FPS",
+                    "Minecraft RTX 1440p": "100 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$899",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/4mQblBj"
+            },
+            {
+                name: "RTX 4070 SUPER",
+                series: "RTX 40",
+                category: "mid-range",
+                specs: {
+                    memory: "12GB GDDR6X",
+                    baseClock: "1980 MHz",
+                    boostClock: "2475 MHz",
+                    memoryBandwidth: "504 GB/s",
+                    rtCores: "56",
+                    tensorCores: "224",
+                    powerConsumption: "220W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "78 FPS",
+                    "Call of Duty 1440p": "110 FPS",
+                    "Fortnite 1440p": "155 FPS",
+                    "Minecraft RTX 1440p": "90 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$599",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/4kTlTOk"
+            },
+            {
+                name: "RTX 4070",
+                series: "RTX 40",
+                category: "mid-range",
+                specs: {
+                    memory: "12GB GDDR6X",
+                    baseClock: "1920 MHz",
+                    boostClock: "2475 MHz",
+                    memoryBandwidth: "504 GB/s",
+                    rtCores: "46",
+                    tensorCores: "184",
+                    powerConsumption: "200W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "68 FPS",
+                    "Call of Duty 1440p": "95 FPS",
+                    "Fortnite 1440p": "140 FPS",
+                    "Minecraft RTX 1440p": "80 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$699",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/4mWD3fU"
+            },
+            {
+                name: "RTX 4060 Ti",
+                series: "RTX 40",
+                category: "mid-range",
+                specs: {
+                    memory: "16GB GDDR6",
+                    baseClock: "2310 MHz",
+                    boostClock: "2535 MHz",
+                    memoryBandwidth: "288 GB/s",
+                    rtCores: "34",
+                    tensorCores: "136",
+                    powerConsumption: "165W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "85 FPS",
+                    "Call of Duty 1080p": "120 FPS",
+                    "Fortnite 1080p": "165 FPS",
+                    "Minecraft RTX 1080p": "95 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$499",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/4e6FUPh"
+            },
+            {
+                name: "RTX 4060",
+                series: "RTX 40",
+                category: "budget",
+                specs: {
+                    memory: "8GB GDDR6",
+                    baseClock: "1830 MHz",
+                    boostClock: "2460 MHz",
+                    memoryBandwidth: "272 GB/s",
+                    rtCores: "24",
+                    tensorCores: "96",
+                    powerConsumption: "115W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "68 FPS",
+                    "Call of Duty 1080p": "95 FPS",
+                    "Fortnite 1080p": "140 FPS",
+                    "Minecraft RTX 1080p": "75 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 3", "AV1 Encoding", "PCIe 4.0"],
+                price: "$299",
+                powerRating: "Low",
+                amazonLink: "https://amzn.to/4dZPDXN"
+            },
+
+            // RTX 30 Series
+            {
+                name: "RTX 3090 Ti",
+                series: "RTX 30",
+                category: "high-end",
+                specs: {
+                    memory: "24GB GDDR6X",
+                    baseClock: "1560 MHz",
+                    boostClock: "1860 MHz",
+                    memoryBandwidth: "1008 GB/s",
+                    rtCores: "84",
+                    tensorCores: "336",
+                    powerConsumption: "450W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "55 FPS",
+                    "Call of Duty 4K": "80 FPS",
+                    "Fortnite 4K": "110 FPS",
+                    "Minecraft RTX 4K": "65 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 2", "NVENC", "PCIe 4.0"],
+                price: "$999",
+                powerRating: "Very High",
+                amazonLink: "https://amzn.to/447Rgz4"
+            },
+            {
+                name: "RTX 3090",
+                series: "RTX 30",
+                category: "high-end",
+                specs: {
+                    memory: "24GB GDDR6X",
+                    baseClock: "1395 MHz",
+                    boostClock: "1695 MHz",
+                    memoryBandwidth: "936 GB/s",
+                    rtCores: "82",
+                    tensorCores: "328",
+                    powerConsumption: "350W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "50 FPS",
+                    "Call of Duty 4K": "75 FPS",
+                    "Fortnite 4K": "105 FPS",
+                    "Minecraft RTX 4K": "60 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 2", "NVENC", "PCIe 4.0"],
+                price: "$899",
+                powerRating: "Very High",
+                amazonLink: "https://amzn.to/3HBHe0o"
+            },
+            {
+                name: "RTX 3080 Ti",
+                series: "RTX 30",
+                category: "high-end",
+                specs: {
+                    memory: "12GB GDDR6X",
+                    baseClock: "1365 MHz",
+                    boostClock: "1665 MHz",
+                    memoryBandwidth: "912 GB/s",
+                    rtCores: "80",
+                    tensorCores: "320",
+                    powerConsumption: "350W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "45 FPS",
+                    "Call of Duty 4K": "68 FPS",
+                    "Fortnite 4K": "95 FPS",
+                    "Minecraft RTX 4K": "55 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 2", "NVENC", "PCIe 4.0"],
+                price: "$699",
+                powerRating: "Very High",
+                amazonLink: "https://amzn.to/4kLqgv2"
+            },
+            {
+                name: "RTX 3080",
+                series: "RTX 30",
+                category: "high-end",
+                specs: {
+                    memory: "10GB GDDR6X",
+                    baseClock: "1440 MHz",
+                    boostClock: "1710 MHz",
+                    memoryBandwidth: "760 GB/s",
+                    rtCores: "68",
+                    tensorCores: "272",
+                    powerConsumption: "320W"
+                },
+                performance: {
+                    "Cyberpunk 2077 4K": "42 FPS",
+                    "Call of Duty 4K": "65 FPS",
+                    "Fortnite 4K": "88 FPS",
+                    "Minecraft RTX 4K": "50 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 2", "NVENC", "PCIe 4.0"],
+                price: "$599",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/4000VFt"
+            },
+            {
+                name: "RTX 3070 Ti",
+                series: "RTX 30",
+                category: "mid-range",
+                specs: {
+                    memory: "8GB GDDR6X",
+                    baseClock: "1580 MHz",
+                    boostClock: "1770 MHz",
+                    memoryBandwidth: "608 GB/s",
+                    rtCores: "48",
+                    tensorCores: "192",
+                    powerConsumption: "290W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "65 FPS",
+                    "Call of Duty 1440p": "90 FPS",
+                    "Fortnite 1440p": "125 FPS",
+                    "Minecraft RTX 1440p": "75 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 2", "NVENC", "PCIe 4.0"],
+                price: "$499",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/4dX2KsF"
+            },
+            {
+                name: "RTX 3070",
+                series: "RTX 30",
+                category: "mid-range",
+                specs: {
+                    memory: "8GB GDDR6",
+                    baseClock: "1500 MHz",
+                    boostClock: "1725 MHz",
+                    memoryBandwidth: "448 GB/s",
+                    rtCores: "46",
+                    tensorCores: "184",
+                    powerConsumption: "220W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "58 FPS",
+                    "Call of Duty 1440p": "85 FPS",
+                    "Fortnite 1440p": "115 FPS",
+                    "Minecraft RTX 1440p": "68 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 2", "NVENC", "PCIe 4.0"],
+                price: "$449",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/440KSsj"
+            },
+            {
+                name: "RTX 3060 Ti",
+                series: "RTX 30",
+                category: "mid-range",
+                specs: {
+                    memory: "8GB GDDR6",
+                    baseClock: "1410 MHz",
+                    boostClock: "1665 MHz",
+                    memoryBandwidth: "448 GB/s",
+                    rtCores: "38",
+                    tensorCores: "152",
+                    powerConsumption: "200W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "85 FPS",
+                    "Call of Duty 1080p": "115 FPS",
+                    "Fortnite 1080p": "155 FPS",
+                    "Minecraft RTX 1080p": "95 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 2", "NVENC", "PCIe 4.0"],
+                price: "$399",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/3SHvxHV"
+            },
+            {
+                name: "RTX 3060",
+                series: "RTX 30",
+                category: "budget",
+                specs: {
+                    memory: "12GB GDDR6",
+                    baseClock: "1320 MHz",
+                    boostClock: "1777 MHz",
+                    memoryBandwidth: "360 GB/s",
+                    rtCores: "28",
+                    tensorCores: "112",
+                    powerConsumption: "170W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "65 FPS",
+                    "Call of Duty 1080p": "90 FPS",
+                    "Fortnite 1080p": "125 FPS",
+                    "Minecraft RTX 1080p": "75 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 2", "NVENC", "PCIe 4.0"],
+                price: "$329",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/3T5QFrD"
+            },
+
+            // RTX 20 Series
+            {
+                name: "RTX 2080 Ti",
+                series: "RTX 20",
+                category: "high-end",
+                specs: {
+                    memory: "11GB GDDR6",
+                    baseClock: "1350 MHz",
+                    boostClock: "1545 MHz",
+                    memoryBandwidth: "616 GB/s",
+                    rtCores: "68",
+                    tensorCores: "544",
+                    powerConsumption: "250W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "45 FPS",
+                    "Call of Duty 1440p": "75 FPS",
+                    "Fortnite 1440p": "105 FPS",
+                    "Minecraft RTX 1440p": "55 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 1", "NVENC", "PCIe 3.0"],
+                price: "$499",
+                powerRating: "High",
+                amazonLink: "https://www.amazon.in/s?k=nvidia+rtx+2080+ti&tag=gpudatabase-21"
+            },
+            {
+                name: "RTX 2080 SUPER",
+                series: "RTX 20",
+                category: "high-end",
+                specs: {
+                    memory: "8GB GDDR6",
+                    baseClock: "1650 MHz",
+                    boostClock: "1815 MHz",
+                    memoryBandwidth: "496 GB/s",
+                    rtCores: "48",
+                    tensorCores: "384",
+                    powerConsumption: "250W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1440p": "38 FPS",
+                    "Call of Duty 1440p": "68 FPS",
+                    "Fortnite 1440p": "95 FPS",
+                    "Minecraft RTX 1440p": "48 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 1", "NVENC", "PCIe 3.0"],
+                price: "$399",
+                powerRating: "High",
+                amazonLink: "https://amzn.to/4kzAgYi"
+            },
+            {
+                name: "RTX 2070 SUPER",
+                series: "RTX 20",
+                category: "mid-range",
+                specs: {
+                    memory: "8GB GDDR6",
+                    baseClock: "1605 MHz",
+                    boostClock: "1770 MHz",
+                    memoryBandwidth: "448 GB/s",
+                    rtCores: "40",
+                    tensorCores: "320",
+                    powerConsumption: "215W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "65 FPS",
+                    "Call of Duty 1080p": "95 FPS",
+                    "Fortnite 1080p": "135 FPS",
+                    "Minecraft RTX 1080p": "75 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 1", "NVENC", "PCIe 3.0"],
+                price: "$349",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/3Zm8K2p"
+            },
+            {
+                name: "RTX 2070",
+                series: "RTX 20",
+                category: "mid-range",
+                specs: {
+                    memory: "8GB GDDR6",
+                    baseClock: "1410 MHz",
+                    boostClock: "1620 MHz",
+                    memoryBandwidth: "448 GB/s",
+                    rtCores: "36",
+                    tensorCores: "288",
+                    powerConsumption: "175W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "58 FPS",
+                    "Call of Duty 1080p": "85 FPS",
+                    "Fortnite 1080p": "120 FPS",
+                    "Minecraft RTX 1080p": "68 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 1", "NVENC", "PCIe 3.0"],
+                price: "$299",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/4jM9Kw2"
+            },
+            {
+                name: "RTX 2060 SUPER",
+                series: "RTX 20",
+                category: "budget",
+                specs: {
+                    memory: "8GB GDDR6",
+                    baseClock: "1470 MHz",
+                    boostClock: "1650 MHz",
+                    memoryBandwidth: "448 GB/s",
+                    rtCores: "34",
+                    tensorCores: "272",
+                    powerConsumption: "175W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "52 FPS",
+                    "Call of Duty 1080p": "78 FPS",
+                    "Fortnite 1080p": "105 FPS",
+                    "Minecraft RTX 1080p": "62 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 1", "NVENC", "PCIe 3.0"],
+                price: "$269",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/3Ht8osq"
+            },
+            {
+                name: "RTX 2060",
+                series: "RTX 20",
+                category: "budget",
+                specs: {
+                    memory: "6GB GDDR6",
+                    baseClock: "1365 MHz",
+                    boostClock: "1680 MHz",
+                    memoryBandwidth: "336 GB/s",
+                    rtCores: "30",
+                    tensorCores: "240",
+                    powerConsumption: "160W"
+                },
+                performance: {
+                    "Cyberpunk 2077 1080p": "42 FPS",
+                    "Call of Duty 1080p": "65 FPS",
+                    "Fortnite 1080p": "88 FPS",
+                    "Minecraft RTX 1080p": "52 FPS"
+                },
+                features: ["Ray Tracing", "DLSS 1", "NVENC", "PCIe 3.0"],
+                price: "$249",
+                powerRating: "Medium",
+                amazonLink: "https://amzn.to/3Htoosq"
+            }
+        ];
+
+        // Enhanced Mobile-First GPU Database Class
+        class MobileGPUDatabase {
+            constructor() {
+                this.gpuData = gpuDatabase;
+                this.filteredData = [...this.gpuData];
+                this.currentFilter = 'all';
+                this.searchQuery = '';
+                this.isLoading = false;
+                this.init();
+            }
+
+            async init() {
+                this.showLoading();
+                this.setupEventListeners();
+                this.setupIntersectionObserver();
+                
+                // Render with slight delay for better UX
+                setTimeout(() => {
+                    this.renderGPUs();
+                    this.hideLoading();
+                    this.initializeChart();
+                }, 800);
+            }
+
+            setupEventListeners() {
+                // Mobile navigation
+                this.setupMobileNavigation();
+                
+                // Search functionality
+                this.setupSearch();
+                
+                // Filter buttons
+                this.setupFilters();
+                
+                // Touch interactions
+                this.setupTouchInteractions();
+                
+                // Scroll optimizations
+                this.setupScrollOptimizations();
+            }
+
+            setupMobileNavigation() {
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const navLinks = document.getElementById('navLinks');
+                
+                if (!mobileMenuBtn || !navLinks) return;
+
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    mobileMenuBtn.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                        this.closeMenu();
+                    }
+                });
+
+                // Close menu on nav link click
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        this.closeMenu();
+                    });
+                });
+
+                // Close menu on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        this.closeMenu();
+                    }
+                });
+            }
+
+            closeMenu() {
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const navLinks = document.getElementById('navLinks');
+                
+                if (mobileMenuBtn && navLinks) {
+                    mobileMenuBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            setupSearch() {
+                const searchInput = document.getElementById('searchInput');
+                if (!searchInput) return;
+
+                let searchTimeout;
+                
+                searchInput.addEventListener('input', (e) => {
+                    clearTimeout(searchTimeout);
+                    
+                    searchTimeout = setTimeout(() => {
+                        this.handleSearch(e.target.value);
+                    }, 300);
+                });
+
+                // Clear search on escape
+                searchInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        searchInput.value = '';
+                        this.handleSearch('');
+                    }
+                });
+            }
+
+            setupFilters() {
+                document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Update active state
+                        document.querySelectorAll('.filter-btn').forEach(b => 
+                            b.classList.remove('active')
+                        );
+                        btn.classList.add('active');
+
+                        // Apply filter
+                        this.currentFilter = btn.dataset.filter;
+                        this.applyFilters();
+                    });
+                });
+            }
+
+            setupTouchInteractions() {
+                // Add touch feedback to cards
+                document.addEventListener('touchstart', (e) => {
+                    const card = e.target.closest('.gpu-card');
+                    if (card) {
+                        card.classList.add('touch-active');
+                    }
+                }, { passive: true });
+
+                document.addEventListener('touchend', (e) => {
+                    const card = e.target.closest('.gpu-card');
+                    if (card) {
+                        setTimeout(() => {
+                            card.classList.remove('touch-active');
+                        }, 150);
+                    }
+                }, { passive: true });
+            }
+
+            setupScrollOptimizations() {
+                let ticking = false;
+                let lastScrollTop = 0;
+
+                const handleScroll = () => {
+                    if (!ticking) {
+                        requestAnimationFrame(() => {
+                            // Hide/show navbar on scroll (mobile)
+                            if (window.innerWidth <= 768) {
+                                const navbar = document.querySelector('.navbar');
+                                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                                
+                                if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                                    navbar.style.transform = 'translateY(-100%)';
+                                } else {
+                                    navbar.style.transform = 'translateY(0)';
+                                }
+                                
+                                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+                            }
+                            
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                };
+
+                document.addEventListener('scroll', handleScroll, { passive: true });
+            }
+
+            setupIntersectionObserver() {
+                const options = {
+                    root: null,
+                    rootMargin: '50px',
+                    threshold: 0.1
+                };
+
+                this.observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            this.animateCardIn(entry.target);
+                            this.observer.unobserve(entry.target);
+                        }
+                    });
+                }, options);
+            }
+
+            animateCardIn(card) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+                
+                // Add stagger effect for multiple cards
+                const cards = Array.from(document.querySelectorAll('.gpu-card'));
+                const index = cards.indexOf(card);
+                card.style.transitionDelay = `${index * 50}ms`;
+            }
+
+            handleSearch(query) {
+                this.searchQuery = query.toLowerCase().trim();
+                this.applyFilters();
+            }
+
+            applyFilters() {
+                this.showLoading();
+                
+                requestAnimationFrame(() => {
+                    let result = [...this.gpuData];
+
+                    // Apply search filter
+                    if (this.searchQuery) {
+                        result = result.filter(gpu => 
+                            gpu.name.toLowerCase().includes(this.searchQuery) ||
+                            gpu.series.toLowerCase().includes(this.searchQuery) ||
+                            Object.values(gpu.performance).some(fps => 
+                                fps.toLowerCase().includes(this.searchQuery)
+                            ) ||
+                            gpu.features.some(feature => 
+                                feature.toLowerCase().includes(this.searchQuery)
+                            )
+                        );
+                    }
+
+                    // Apply category filter
+                    if (this.currentFilter !== 'all') {
+                        if (['high-end', 'mid-range', 'budget'].includes(this.currentFilter)) {
+                            result = result.filter(gpu => gpu.category === this.currentFilter);
+                        } else {
+                            result = result.filter(gpu => 
+                                gpu.series.toLowerCase().replace(/\s/g, '-') === this.currentFilter
+                            );
+                        }
+                    }
+
+                    this.filteredData = result;
+                    
+                    setTimeout(() => {
+                        this.renderGPUs();
+                        this.hideLoading();
+                    }, 300);
+                });
+            }
+
+            renderGPUs() {
+                const container = document.getElementById('gpuGrid');
+                if (!container) return;
+
+                // Handle empty results
+                if (this.filteredData.length === 0) {
+                    this.showNoResults(container);
+                    return;
+                }
+
+                // Apply special centering for exactly 2 cards
+                if (this.filteredData.length === 2) {
+                    container.className = 'gpu-grid center-two-cards';
+                } else {
+                    container.className = 'gpu-grid';
+                }
+
+                // Render cards
+                const cardsHTML = this.filteredData.map(gpu => this.createGPUCard(gpu)).join('');
+                container.innerHTML = cardsHTML;
+
+                // Setup card interactions
+                this.setupCardInteractions();
+                
+                // Observe new cards for animation
+                this.observeNewCards();
+            }
+
+            createGPUCard(gpu) {
+                return `
+                    <article class="gpu-card" role="article" aria-labelledby="gpu-${gpu.name.replace(/\s+/g, '-').toLowerCase()}">
+                        <header class="gpu-header">
+                            <h3 class="gpu-name" id="gpu-${gpu.name.replace(/\s+/g, '-').toLowerCase()}">${gpu.name}</h3>
+                            <div class="gpu-series" role="badge">${gpu.series}</div>
+                        </header>
+                        
+                        <section class="gpu-specs" role="table" aria-label="${gpu.name} specifications">
+                            <div class="spec-item" role="row">
+                                <div class="spec-label" role="columnheader">Memory</div>
+                                <div class="spec-value" role="cell">${gpu.specs.memory}</div>
+                            </div>
+                            <div class="spec-item" role="row">
+                                <div class="spec-label" role="columnheader">Boost Clock</div>
+                                <div class="spec-value" role="cell">${gpu.specs.boostClock}</div>
+                            </div>
+                            <div class="spec-item" role="row">
+                                <div class="spec-label" role="columnheader">RT Cores</div>
+                                <div class="spec-value" role="cell">${gpu.specs.rtCores}</div>
+                            </div>
+                            <div class="spec-item" role="row">
+                                <div class="spec-label" role="columnheader">Bandwidth</div>
+                                <div class="spec-value" role="cell">${gpu.specs.memoryBandwidth}</div>
+                            </div>
+                        </section>
+                        
+                        <section class="performance-section">
+                            <h4 class="performance-title">Gaming Performance</h4>
+                            <div class="fps-list">
+                                ${Object.entries(gpu.performance).map(([game, fps]) => `
+                                    <div class="fps-item">
+                                        <span class="game-name">${game}</span>
+                                        <span class="fps-value">${fps}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </section>
+                        
+                        <div class="power-indicator" role="note" aria-label="Power consumption information">
+                            <div class="power-icon" aria-hidden="true">⚡</div>
+                            <div class="power-text">
+                                <div class="power-consumption">${gpu.specs.powerConsumption}</div>
+                                <div class="power-rating">Power Rating: ${gpu.powerRating}</div>
+                            </div>
+                        </div>
+                        
+                        <footer class="gpu-card-footer">
+                            <a href="${gpu.amazonLink}" 
+                               target="_blank" 
+                               rel="nofollow noopener" 
+                               class="cta-button"
+                               aria-label="Buy ${gpu.name} on Amazon">
+                                🛒 Buy Now - ${gpu.price}
+                            </a>
+                        </footer>
+                    </article>
+                `;
+            }
+
+            setupCardInteractions() {
+                document.querySelectorAll('.gpu-card').forEach(card => {
+                    // Add hover effects for desktop
+                    card.addEventListener('mousemove', (e) => {
+                        if (window.innerWidth > 768) {
+                            const rect = card.getBoundingClientRect();
+                            const x = e.clientX - rect.left;
+                            const y = e.clientY - rect.top;
+                            card.style.background = 
+                                `radial-gradient(circle at ${x}px ${y}px, rgba(0, 255, 136, 0.15), rgba(255, 255, 255, 0.05))`;
+                        }
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.background = 'rgba(255, 255, 255, 0.05)';
+                    });
+                });
+            }
+
+            observeNewCards() {
+                document.querySelectorAll('.gpu-card').forEach(card => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    this.observer.observe(card);
+                });
+            }
+
+            showNoResults(container) {
+                container.innerHTML = `
+                    <div class="no-results" style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
+                        <h3 style="color: #00ff88; margin-bottom: 1rem;">No GPUs found</h3>
+                        <p style="color: #ccc; margin-bottom: 2rem;">Try adjusting your search or filter criteria</p>
+                        <button onclick="database.clearFilters()" class="cta-button" style="width: auto;">
+                            Clear All Filters
+                        </button>
+                    </div>
+                `;
+            }
+
+            clearFilters() {
+                this.currentFilter = 'all';
+                this.searchQuery = '';
+                
+                // Reset UI
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput) searchInput.value = '';
+                
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+                
+                this.applyFilters();
+            }
+
+            showLoading() {
+                const indicator = document.getElementById('loadingIndicator');
+                if (indicator) indicator.style.display = 'block';
+                this.isLoading = true;
+            }
+
+            hideLoading() {
+                const indicator = document.getElementById('loadingIndicator');
+                if (indicator) indicator.style.display = 'none';
+                this.isLoading = false;
+            }
+
+            initializeChart() {
+                const ctx = document.getElementById('comparisonChart');
+                if (!ctx) return;
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["RTX 5090", "RTX 5080", "RTX 4090", "RTX 4080 SUPER", "RTX 4070 SUPER", "RTX 3080"],
+                        datasets: [{
+                            label: "4K Gaming Performance (FPS)",
+                            data: [120, 95, 85, 68, 58, 42],
+                            backgroundColor: ["#00ff88", "#00ccff", "#ff8800", "#ff4444", "#8844ff", "#ff44cc"],
+                            borderColor: ["#00ff88", "#00ccff", "#ff8800", "#ff4444", "#8844ff", "#ff44cc"],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: "FPS",
+                                    color: '#ffffff'
+                                },
+                                ticks: {
+                                    color: '#cccccc',
+                                    stepSize: 20
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: "GPU Model",
+                                    color: '#ffffff'
+                                },
+                                ticks: {
+                                    color: '#cccccc'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#ffffff'
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                titleColor: '#ffffff',
+                                bodyColor: '#cccccc'
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Global functions for backward compatibility
+        function filterGPUs(filter) {
+            if (window.database) {
+                window.database.currentFilter = filter;
+                window.database.applyFilters();
+            }
+        }
+
+        function searchGPUs(query) {
+            if (window.database) {
+                window.database.handleSearch(query);
+            }
+        }
+
+        function sortGPUs(criteria) {
+            if (window.database) {
+                let result = [...window.database.filteredData];
+                
+                result.sort((a, b) => {
+                    if (criteria === 'price') {
+                        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
+                    } else if (criteria === 'fps') {
+                        const aFPS = parseInt(Object.values(a.performance)[0] || '0');
+                        const bFPS = parseInt(Object.values(b.performance)[0] || '0');
+                        return bFPS - aFPS;
+                    }
+                });
+                
+                window.database.filteredData = result;
+                window.database.renderGPUs();
+            }
+        }
+
+        function showAllGuides() {
+            const guidesSection = document.getElementById('guides');
+            guidesSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        function showAllNews() {
+            const newsSection = document.getElementById('news');
+            newsSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Initialize the database
+        document.addEventListener('DOMContentLoaded', () => {
+            window.database = new MobileGPUDatabase();
+            
+            // Smooth navigation handling
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                        const targetId = href.substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Logo click handling
+            const logoLink = document.querySelector('.logo');
+            logoLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                navLinks.forEach(l => l.classList.remove('active'));
+                document.querySelector('.nav-link[href="/"]').classList.add('active');
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Scroll spy for navigation
+            window.addEventListener('scroll', () => {
+                const sections = ['home', 'gpus', 'comparison', 'guides', 'news'];
+                let current = '';
+                for (const section of sections) {
+                    const element = document.getElementById(section);
+                    if (element && element.getBoundingClientRect().top <= 100) {
+                        current = section;
+                    }
+                }
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current || (current === 'home' && link.getAttribute('href') === '/')) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Service Worker Registration for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>

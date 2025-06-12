@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for GPU Database - Learn how we protect your data and privacy.">
+    <meta name="keywords" content="privacy policy, data protection, GPU Database privacy">
+    <meta property="og:title" content="Privacy Policy - GPU Database">
+    <meta property="og:description" content="Learn how GPU Database protects your personal information and privacy.">
+    <meta property="og:url" content="https://gpudatabase.in/privacy-policy">
+    <meta property="og:image" content="https://gpudatabase.in/img/privacy-og.jpg">
+    <link rel="canonical" href="https://gpudatabase.in/privacy-policy">
+    <title>Privacy Policy - GPU Database | Data Protection & Privacy</title>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy",
+        "url": "https://gpudatabase.in/privacy-policy",
+        "description": "Privacy policy for GPU Database detailing data collection and protection practices",
+        "publisher": {
+            "@type": "Organization",
+            "name": "GPU Database",
+            "url": "https://gpudatabase.in"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00ff88, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            flex-direction: column;
+            padding: 1rem;
+            gap: 0.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            list-style: none;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.1);
+            transform: translateX(4px);
+        }
+
+        .nav-links a.active {
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.15);
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-btn span {
+            width: 24px;
+            height: 3px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 1rem 60px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 8vw, 3rem);
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(45deg, #ffffff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+
+        .policy-content {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 1.8;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h2 {
+            color: #00ff88;
+            font-size: clamp(1.2rem, 5vw, 1.5rem);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .policy-section h3 {
+            color: #00ccff;
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            margin-bottom: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .policy-section p {
+            color: #cccccc;
+            margin-bottom: 1rem;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+        }
+
+        .policy-section ul {
+            color: #cccccc;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+        }
+
+        .highlight {
+            background: rgba(0, 255, 136, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid #00ff88;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info {
+            background: rgba(0, 204, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 204, 255, 0.3);
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: #00ccff;
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            color: #00ff88;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #00ccff;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 3rem 1rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: #00ff88;
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            .navbar {
+                padding: 1rem 2rem;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                position: static;
+                background: none;
+                flex-direction: row;
+                padding: 0;
+                gap: 1rem;
+                border: none;
+                box-shadow: none;
+            }
+
+            .nav-links a {
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+            }
+
+            .nav-links a:hover {
+                transform: none;
+            }
+
+            .policy-content {
+                padding: 3rem;
+            }
+        }
+
+        /* Focus Styles for Accessibility */
+        .nav-links a:focus,
+        .contact-link:focus {
+            outline: 3px solid #00ff88;
+            outline-offset: 2px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Extra Small Mobile Screens */
+        @media (max-width: 360px) {
+            .container {
+                padding: 120px 0.5rem 60px;
+            }
+            
+            .policy-content {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="logo">GPU Database</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/#gpus" class="nav-link">Graphics Cards</a></li>
+                <li><a href="/#comparison" class="nav-link">Compare</a></li>
+                <li><a href="/#guides" class="nav-link">Guides</a></li>
+                <li><a href="/#news" class="nav-link">News</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Privacy Policy</h1>
+        <p class="last-updated">Last updated: June 10, 2025</p>
+
+        <div class="policy-content">
+            <div class="policy-section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to GPU Database ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (gpudatabase.in) or interact with our services.</p>
+                
+                <div class="highlight">
+                    <strong>Your privacy is important to us.</strong> We are committed to protecting your personal information and being transparent about our data practices.
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2>2. Information We Collect</h2>
+                
+                <h3>2.1 Information You Provide</h3>
+                <ul>
+                    <li>Contact information (name, email address, phone number)</li>
+                    <li>Messages and communications sent through our contact forms</li>
+                    <li>Project details and technical requirements</li>
+                    <li>Newsletter subscription preferences</li>
+                </ul>
+
+                <h3>2.2 Automatically Collected Information</h3>
+                <ul>
+                    <li>IP address and geographic location</li>
+                    <li>Browser type and version</li>
+                    <li>Pages visited and time spent on site</li>
+                    <li>Referring websites and search terms</li>
+                    <li>Device information (mobile, desktop, screen resolution)</li>
+                </ul>
+
+                <h3>2.3 Cookies and Tracking Technologies</h3>
+                <p>We use cookies and similar technologies to enhance your browsing experience, analyze site traffic, and personalize content. You can control cookie preferences through your browser settings.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>3. How We Use Your Information</h2>
+                <p>We use the collected information for the following purposes:</p>
+                <ul>
+                    <li>Responding to your inquiries and providing customer support</li>
+                    <li>Delivering requested services (PC builds, web development, SEO consultation)</li>
+                    <li>Sending newsletters and updates about GPU technology</li>
+                    <li>Improving our website functionality and user experience</li>
+                    <li>Analyzing website traffic and user behavior</li>
+                    <li>Preventing fraud and ensuring website security</li>
+                    <li>Complying with legal obligations</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>4. Information Sharing and Disclosure</h2>
+                <p>We do not sell, trade, or rent your personal information to third parties. We may share information in the following circumstances:</p>
+                
+                <h3>4.1 Service Providers</h3>
+                <p>We may share information with trusted third-party service providers who assist us in:</p>
+                <ul>
+                    <li>Website hosting and maintenance</li>
+                    <li>Email delivery services</li>
+                    <li>Analytics and performance monitoring</li>
+                    <li>Payment processing (for paid services)</li>
+                </ul>
+
+                <h3>4.2 Legal Requirements</h3>
+                <p>We may disclose information when required by law or to protect our rights, property, or safety.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>5. Data Security</h2>
+                <p>We implement appropriate technical and organizational measures to protect your information:</p>
+                <ul>
+                    <li>SSL encryption for data transmission</li>
+                    <li>Secure server infrastructure</li>
+                    <li>Regular security audits and updates</li>
+                    <li>Limited access to personal information</li>
+                    <li>Employee training on data protection</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>Please note:</strong> No method of transmission over the internet is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2>6. Your Rights and Choices</h2>
+                <p>You have the following rights regarding your personal information:</p>
+                
+                <h3>6.1 Access and Correction</h3>
+                <p>You can request access to your personal information and ask us to correct any inaccuracies.</p>
+
+                <h3>6.2 Data Portability</h3>
+                <p>You can request a copy of your data in a commonly used, machine-readable format.</p>
+
+                <h3>6.3 Deletion</h3>
+                <p>You can request deletion of your personal information, subject to legal requirements.</p>
+
+                <h3>6.4 Opt-out</h3>
+                <p>You can unsubscribe from marketing communications at any time using the unsubscribe link in emails.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>7. Third-Party Links</h2>
+                <p>Our website may contain links to third-party websites, including:</p>
+                <ul>
+                    <li>Amazon affiliate links for GPU purchases</li>
+                    <li>Social media platforms</li>
+                    <li>Technology news sources</li>
+                    <li>Partner websites</li>
+                </ul>
+                <p>We are not responsible for the privacy practices of these external sites. Please review their privacy policies before providing any information.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>8. Children's Privacy</h2>
+                <p>Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>9. International Data Transfers</h2>
+                <p>Your information may be processed and stored in countries other than your own. We ensure appropriate safeguards are in place to protect your information during international transfers.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>10. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically.</p>
+                
+                <p>For significant changes, we will provide additional notice through:</p>
+                <ul>
+                    <li>Email notifications to registered users</li>
+                    <li>Prominent notices on our website</li>
+                    <li>Social media announcements</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Us About Privacy</h3>
+                <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
+                <p><strong>Email:</strong> <a href="mailto:gouravchoudharyofficial@gmail.com" class="contact-link">gouravchoudharyofficial@gmail.com</a></p>
+                <p><strong>Subject Line:</strong> Privacy Policy Inquiry</p>
+                <p><strong>Response Time:</strong> We will respond to privacy-related inquiries within 7 business days.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Service</a>
+                <a href="/advertise">Advertise</a>
+            </div>
+            <p>© 2025 GPU Database. All rights reserved. | The ultimate resource for graphics card information</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    mobileMenuBtn.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                        closeMenu();
+                    }
+                });
+
+                // Close menu on nav link click
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        closeMenu();
+                    });
+                });
+
+                // Close menu on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        closeMenu();
+                    }
+                });
+            }
+
+            function closeMenu() {
+                if (mobileMenuBtn && navLinks) {
+                    mobileMenuBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
