@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    
+
     <!-- Enhanced SEO Meta Tags -->
-    <meta name="description" content="Complete GPU database with 30+ NVIDIA RTX graphics cards. Compare specs, benchmarks, and prices. Find the best GPU for gaming, 4K, 1440p, and 1080p performance.">
-    <meta name="keywords" content="GPU database, NVIDIA RTX, graphics cards, GPU comparison, gaming performance, RTX 50 series, RTX 40 series, GPU benchmarks, PC building">
+    <meta name="description"
+        content="Complete GPU database with 30+ NVIDIA RTX graphics cards. Compare specs, benchmarks, and prices. Find the best GPU for gaming, 4K, 1440p, and 1080p performance.">
+    <meta name="keywords"
+        content="GPU database, NVIDIA RTX, graphics cards, GPU comparison, gaming performance, RTX 50 series, RTX 40 series, GPU benchmarks, PC building">
     <meta name="author" content="Gourav Choudhary">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://gpudatabase.in/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gpudatabase.in/">
     <meta property="og:title" content="GPU Database - Complete Graphics Card Guide | 30+ RTX Models">
-    <meta property="og:description" content="Explore 30+ NVIDIA RTX GPUs with detailed specs, performance benchmarks, and price comparisons. Find your perfect graphics card.">
+    <meta property="og:description"
+        content="Explore 30+ NVIDIA RTX GPUs with detailed specs, performance benchmarks, and price comparisons. Find your perfect graphics card.">
     <meta property="og:image" content="https://gpudatabase.in/img/og-image.jpg">
     <meta property="og:site_name" content="GPU Database">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://gpudatabase.in/">
     <meta property="twitter:title" content="GPU Database - Complete Graphics Card Guide">
-    <meta property="twitter:description" content="Compare 30+ NVIDIA RTX graphics cards with specs, benchmarks, and prices">
+    <meta property="twitter:description"
+        content="Compare 30+ NVIDIA RTX graphics cards with specs, benchmarks, and prices">
     <meta property="twitter:image" content="https://gpudatabase.in/img/twitter-image.jpg">
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZNJPF8XZ3"></script>
+
+
     <title>GPU Database - Complete Graphics Card Guide | 30+ RTX Models Compared</title>
-    
+
     <!-- Preconnections for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="//www.amazon.in">
-    
+
     <!-- Chart.js for comparison charts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
@@ -325,7 +332,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center; /* Center all text content */
+            text-align: center;
+            /* Center all text content */
         }
 
         .gpu-card::before {
@@ -542,8 +550,10 @@
             border: none;
             cursor: pointer;
             text-align: center;
-            width: 250px; /* Fixed width for consistency */
-            height: 45px; /* Fixed height for consistency */
+            width: 250px;
+            /* Fixed width for consistency */
+            height: 45px;
+            /* Fixed height for consistency */
             line-height: 1.2;
             margin: 1rem auto 0 auto;
             white-space: nowrap;
@@ -578,8 +588,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Special handling for exactly 2 cards */
@@ -593,7 +608,7 @@
             margin: 0 auto 4rem auto !important;
             width: 100% !important;
         }
-        
+
         .center-two-cards .gpu-card {
             flex: 0 0 100% !important;
             max-width: 420px !important;
@@ -852,13 +867,13 @@
             .container {
                 padding: 0 0.5rem;
             }
-            
+
             .gpu-card {
                 padding: 1rem;
                 min-width: 260px;
                 max-width: 95vw;
             }
-            
+
             .cta-button {
                 width: 220px;
                 height: 45px;
@@ -868,6 +883,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-content">
@@ -891,11 +907,15 @@
 
     <section class="hero" id="home">
         <h1>Complete GPU Database</h1>
-        <p>Your ultimate resource for NVIDIA GeForce RTX graphics cards. Compare 30+ GPU models from RTX 20, 30, 40, and 50 series. Get detailed specs, real-world gaming performance, power consumption data, and find the perfect GPU for your needs.</p>
-        <p style="text-align: center; color: #ff4444; font-size: 0.9rem; margin-top: 1rem;">Note: RTX 50 series specs are based on leaks and may change upon official release.</p>
-        
+        <p>Your ultimate resource for NVIDIA GeForce RTX graphics cards. Compare 30+ GPU models from RTX 20, 30, 40, and
+            50 series. Get detailed specs, real-world gaming performance, power consumption data, and find the perfect
+            GPU for your needs.</p>
+        <p style="text-align: center; color: #ff4444; font-size: 0.9rem; margin-top: 1rem;">Note: RTX 50 series specs
+            are based on leaks and may change upon official release.</p>
+
         <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search for GPU models, games, or specifications..." id="searchInput" aria-label="Search GPUs">
+            <input type="text" class="search-bar" placeholder="Search for GPU models, games, or specifications..."
+                id="searchInput" aria-label="Search GPUs">
         </div>
 
         <div class="filters">
@@ -924,45 +944,55 @@
 
         <div class="comparison-section" id="comparison">
             <h2 class="section-title">GPU Database Statistics</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: center;">
-                <div style="background: rgba(0, 255, 136, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(0, 255, 136, 0.3);">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: center;">
+                <div
+                    style="background: rgba(0, 255, 136, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(0, 255, 136, 0.3);">
                     <div style="font-size: 2.5rem; font-weight: bold; color: #00ff88;">30+</div>
                     <div style="color: #ccc;">Total GPU Models</div>
                 </div>
-                <div style="background: rgba(0, 204, 255, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(0, 204, 255, 0.3);">
+                <div
+                    style="background: rgba(0, 204, 255, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(0, 204, 255, 0.3);">
                     <div style="font-size: 2.5rem; font-weight: bold; color: #00ccff;">4</div>
                     <div style="color: #ccc;">RTX Generations</div>
                 </div>
-                <div style="background: rgba(255, 136, 0, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255, 136, 0, 0.3);">
+                <div
+                    style="background: rgba(255, 136, 0, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255, 136, 0, 0.3);">
                     <div style="font-size: 2.5rem; font-weight: bold; color: #ff8800;">$249-$1999</div>
                     <div style="color: #ccc;">Price Range</div>
                 </div>
-                <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.3);">
+                <div
+                    style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.3);">
                     <div style="font-size: 2.5rem; font-weight: bold; color: #ffffff;">115W-500W</div>
                     <div style="color: #ccc;">Power Range</div>
                 </div>
             </div>
 
             <h2 class="section-title">Performance Comparison</h2>
-            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Compare graphics cards side by side to make informed decisions</p>
+            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Compare graphics cards side by side to make
+                informed decisions</p>
             <canvas id="comparisonChart" width="400" height="200"></canvas>
         </div>
 
         <div class="ad-space">
             <h3>Affiliate Links Section</h3>
             <p>Best deals on graphics cards - shop now on Amazon!</p>
-            <a href="https://www.amazon.in/s?k=nvidia+rtx&tag=gpudatabase-21" target="_blank" class="cta-button">Explore Deals</a>
+            <a href="https://www.amazon.in/s?k=nvidia+rtx&tag=gpudatabase-21" target="_blank" class="cta-button">Explore
+                Deals</a>
         </div>
 
         <!-- Guides Section -->
         <section class="comparison-section" id="guides">
             <h2 class="section-title">GPU Buying Guides</h2>
-            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Expert guides to help you choose the perfect graphics card</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Expert guides to help you choose the
+                perfect graphics card</p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
                 <div class="gpu-card">
                     <h3 style="color: #00ff88; margin-bottom: 1rem;">🎮 Gaming GPU Guide 2025</h3>
-                    <p style="color: #ccc; margin-bottom: 1rem;">Choose the best GPU for 1080p, 1440p, and 4K gaming. Compare performance across different price ranges.</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Choose the best GPU for 1080p, 1440p, and 4K gaming.
+                        Compare performance across different price ranges.</p>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.9rem;">
                         <div>• Budget Gaming: RTX 4060</div>
                         <div>• 1440p Gaming: RTX 4070 SUPER</div>
@@ -973,7 +1003,8 @@
 
                 <div class="gpu-card">
                     <h3 style="color: #00ccff; margin-bottom: 1rem;">💡 Power Supply Guide</h3>
-                    <p style="color: #ccc; margin-bottom: 1rem;">Calculate the right PSU wattage for your GPU. Ensure stable power delivery and efficiency.</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Calculate the right PSU wattage for your GPU. Ensure
+                        stable power delivery and efficiency.</p>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.9rem;">
                         <div>• RTX 4060: 550W PSU</div>
                         <div>• RTX 4070: 650W PSU</div>
@@ -984,7 +1015,8 @@
 
                 <div class="gpu-card">
                     <h3 style="color: #ff8800; margin-bottom: 1rem;">🔧 Installation Guide</h3>
-                    <p style="color: #ccc; margin-bottom: 1rem;">Step-by-step GPU installation, driver setup, and optimization tips for maximum performance.</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Step-by-step GPU installation, driver setup, and
+                        optimization tips for maximum performance.</p>
                     <div style="font-size: 0.9rem; color: #ccc;">
                         <div>• Pre-installation checklist</div>
                         <div>• Physical installation steps</div>
@@ -995,7 +1027,8 @@
 
                 <div class="gpu-card">
                     <h3 style="color: #ff4444; margin-bottom: 1rem;">📊 Benchmark Guide</h3>
-                    <p style="color: #ccc; margin-bottom: 1rem;">Understanding GPU benchmarks, performance metrics, and real-world gaming tests.</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Understanding GPU benchmarks, performance metrics, and
+                        real-world gaming tests.</p>
                     <div style="font-size: 0.9rem; color: #ccc;">
                         <div>• 3DMark benchmarks</div>
                         <div>• Game-specific testing</div>
@@ -1013,14 +1046,19 @@
         <!-- News Section -->
         <section class="comparison-section" id="news">
             <h2 class="section-title">Latest GPU News</h2>
-            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Stay updated with the latest graphics card releases and tech news</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">Stay updated with the latest graphics card
+                releases and tech news</p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
                 <article class="gpu-card">
-                    <div style="background: linear-gradient(45deg, #00ff88, #00ccff); height: 4px; margin: -2rem -2rem 1rem -2rem;"></div>
+                    <div
+                        style="background: linear-gradient(45deg, #00ff88, #00ccff); height: 4px; margin: -2rem -2rem 1rem -2rem;">
+                    </div>
                     <div style="color: #00ff88; font-size: 0.8rem; margin-bottom: 0.5rem;">LATEST • June 9, 2025</div>
                     <h3 style="color: #ffffff; margin-bottom: 1rem;">RTX 50 Series Launch: What We Know</h3>
-                    <p style="color: #ccc; margin-bottom: 1rem;">NVIDIA's next-generation RTX 50 series promises revolutionary performance with GDDR7 memory and enhanced ray tracing capabilities.</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">NVIDIA's next-generation RTX 50 series promises
+                        revolutionary performance with GDDR7 memory and enhanced ray tracing capabilities.</p>
                     <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: #999;">
                         <span>• DLSS 4 Technology</span>
                         <span>• Up to 32GB VRAM</span>
@@ -1029,10 +1067,13 @@
                 </article>
 
                 <article class="gpu-card">
-                    <div style="background: linear-gradient(45deg, #ff8800, #ff4444); height: 4px; margin: -2rem -2rem 1rem -2rem;"></div>
+                    <div
+                        style="background: linear-gradient(45deg, #ff8800, #ff4444); height: 4px; margin: -2rem -2rem 1rem -2rem;">
+                    </div>
                     <div style="color: #ff8800; font-size: 0.8rem; margin-bottom: 0.5rem;">TRENDING • June 8, 2025</div>
                     <h3 style="color: #ffffff; margin-bottom: 1rem;">GPU Prices Drop as New Generation Approaches</h3>
-                    <p style="color: #ccc; margin-bottom: 1rem;">RTX 40 series sees significant price reductions ahead of RTX 50 launch. Great time for budget-conscious buyers.</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">RTX 40 series sees significant price reductions ahead
+                        of RTX 50 launch. Great time for budget-conscious buyers.</p>
                     <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: #999;">
                         <span>• Up to 30% off</span>
                         <span>• All retailers</span>
@@ -1041,10 +1082,13 @@
                 </article>
 
                 <article class="gpu-card">
-                    <div style="background: linear-gradient(45deg, #00ccff, #4488ff); height: 4px; margin: -2rem -2rem 1rem -2rem;"></div>
+                    <div
+                        style="background: linear-gradient(45deg, #00ccff, #4488ff); height: 4px; margin: -2rem -2rem 1rem -2rem;">
+                    </div>
                     <div style="color: #00ccff; font-size: 0.8rem; margin-bottom: 0.5rem;">REVIEW • June 7, 2025</div>
                     <h3 style="color: #ffffff; margin-bottom: 1rem;">RTX 4070 SUPER vs RTX 4070 Ti: Which to Buy?</h3>
-                    <p style="color: #ccc; margin-bottom: 1rem;">Comprehensive comparison of NVIDIA's mid-range champions. Performance, price, and value analysis.</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">Comprehensive comparison of NVIDIA's mid-range
+                        champions. Performance, price, and value analysis.</p>
                     <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: #999;">
                         <span>• Detailed benchmarks</span>
                         <span>• Price comparison</span>
@@ -1053,10 +1097,13 @@
                 </article>
 
                 <article class="gpu-card">
-                    <div style="background: linear-gradient(45deg, #8844ff, #ff44cc); height: 4px; margin: -2rem -2rem 1rem -2rem;"></div>
+                    <div
+                        style="background: linear-gradient(45deg, #8844ff, #ff44cc); height: 4px; margin: -2rem -2rem 1rem -2rem;">
+                    </div>
                     <div style="color: #8844ff; font-size: 0.8rem; margin-bottom: 0.5rem;">TECH • June 6, 2025</div>
                     <h3 style="color: #ffffff; margin-bottom: 1rem;">Ray Tracing in 2025: How Far We've Come</h3>
-                    <p style="color: #ccc; margin-bottom: 1rem;">From RTX 20 series to RTX 50 series: The evolution of real-time ray tracing and its impact on gaming.</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">From RTX 20 series to RTX 50 series: The evolution of
+                        real-time ray tracing and its impact on gaming.</p>
                     <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: #999;">
                         <span>• Performance gains</span>
                         <span>• Game support</span>
@@ -1066,7 +1113,8 @@
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="#news" class="cta-button" style="background: linear-gradient(45deg, #00ccff, #4488ff);" onclick="showAllNews()">Read All News →</a>
+                <a href="#news" class="cta-button" style="background: linear-gradient(45deg, #00ccff, #4488ff);"
+                    onclick="showAllNews()">Read All News →</a>
             </div>
         </section>
     </div>
@@ -1074,7 +1122,8 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="affiliate-disclosure">
-                <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases. This helps us keep the site running and provide free GPU information.</p>
+                <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases.
+                    This helps us keep the site running and provide free GPU information.</p>
             </div>
             <div class="footer-links">
                 <a href="about.html">About</a>
@@ -1083,7 +1132,8 @@
                 <a href="terms-of-service.html">Terms of Service</a>
                 <a href="advertise.html">Advertise</a>
             </div>
-            <p>© 2025 GPU Database. All rights reserved. | The ultimate resource for 30+ graphics card models with comprehensive specs and performance data</p>
+            <p>© 2025 GPU Database. All rights reserved. | The ultimate resource for 30+ graphics card models with
+                comprehensive specs and performance data</p>
         </div>
     </footer>
 
@@ -1810,7 +1860,7 @@
                 this.showLoading();
                 this.setupEventListeners();
                 this.setupIntersectionObserver();
-                
+
                 // Render with slight delay for better UX
                 setTimeout(() => {
                     this.renderGPUs();
@@ -1822,16 +1872,16 @@
             setupEventListeners() {
                 // Mobile navigation
                 this.setupMobileNavigation();
-                
+
                 // Search functionality
                 this.setupSearch();
-                
+
                 // Filter buttons
                 this.setupFilters();
-                
+
                 // Touch interactions
                 this.setupTouchInteractions();
-                
+
                 // Scroll optimizations
                 this.setupScrollOptimizations();
             }
@@ -1839,14 +1889,14 @@
             setupMobileNavigation() {
                 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
                 const navLinks = document.getElementById('navLinks');
-                
+
                 if (!mobileMenuBtn || !navLinks) return;
 
                 mobileMenuBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     mobileMenuBtn.classList.toggle('active');
                     navLinks.classList.toggle('active');
-                    
+
                     // Prevent body scroll when menu is open
                     document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
                 });
@@ -1876,7 +1926,7 @@
             closeMenu() {
                 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
                 const navLinks = document.getElementById('navLinks');
-                
+
                 if (mobileMenuBtn && navLinks) {
                     mobileMenuBtn.classList.remove('active');
                     navLinks.classList.remove('active');
@@ -1889,10 +1939,10 @@
                 if (!searchInput) return;
 
                 let searchTimeout;
-                
+
                 searchInput.addEventListener('input', (e) => {
                     clearTimeout(searchTimeout);
-                    
+
                     searchTimeout = setTimeout(() => {
                         this.handleSearch(e.target.value);
                     }, 300);
@@ -1911,7 +1961,7 @@
                 document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
                     btn.addEventListener('click', () => {
                         // Update active state
-                        document.querySelectorAll('.filter-btn').forEach(b => 
+                        document.querySelectorAll('.filter-btn').forEach(b =>
                             b.classList.remove('active')
                         );
                         btn.classList.add('active');
@@ -1953,16 +2003,16 @@
                             if (window.innerWidth <= 768) {
                                 const navbar = document.querySelector('.navbar');
                                 const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                                
+
                                 if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
                                     navbar.style.transform = 'translateY(-100%)';
                                 } else {
                                     navbar.style.transform = 'translateY(0)';
                                 }
-                                
+
                                 lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
                             }
-                            
+
                             ticking = false;
                         });
                         ticking = true;
@@ -1992,7 +2042,7 @@
             animateCardIn(card) {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
-                
+
                 // Add stagger effect for multiple cards
                 const cards = Array.from(document.querySelectorAll('.gpu-card'));
                 const index = cards.indexOf(card);
@@ -2006,19 +2056,19 @@
 
             applyFilters() {
                 this.showLoading();
-                
+
                 requestAnimationFrame(() => {
                     let result = [...this.gpuData];
 
                     // Apply search filter
                     if (this.searchQuery) {
-                        result = result.filter(gpu => 
+                        result = result.filter(gpu =>
                             gpu.name.toLowerCase().includes(this.searchQuery) ||
                             gpu.series.toLowerCase().includes(this.searchQuery) ||
-                            Object.values(gpu.performance).some(fps => 
+                            Object.values(gpu.performance).some(fps =>
                                 fps.toLowerCase().includes(this.searchQuery)
                             ) ||
-                            gpu.features.some(feature => 
+                            gpu.features.some(feature =>
                                 feature.toLowerCase().includes(this.searchQuery)
                             )
                         );
@@ -2029,14 +2079,14 @@
                         if (['high-end', 'mid-range', 'budget'].includes(this.currentFilter)) {
                             result = result.filter(gpu => gpu.category === this.currentFilter);
                         } else {
-                            result = result.filter(gpu => 
+                            result = result.filter(gpu =>
                                 gpu.series.toLowerCase().replace(/\s/g, '-') === this.currentFilter
                             );
                         }
                     }
 
                     this.filteredData = result;
-                    
+
                     setTimeout(() => {
                         this.renderGPUs();
                         this.hideLoading();
@@ -2067,7 +2117,7 @@
 
                 // Setup card interactions
                 this.setupCardInteractions();
-                
+
                 // Observe new cards for animation
                 this.observeNewCards();
             }
@@ -2140,7 +2190,7 @@
                             const rect = card.getBoundingClientRect();
                             const x = e.clientX - rect.left;
                             const y = e.clientY - rect.top;
-                            card.style.background = 
+                            card.style.background =
                                 `radial-gradient(circle at ${x}px ${y}px, rgba(0, 255, 136, 0.15), rgba(255, 255, 255, 0.05))`;
                         }
                     });
@@ -2175,14 +2225,14 @@
             clearFilters() {
                 this.currentFilter = 'all';
                 this.searchQuery = '';
-                
+
                 // Reset UI
                 const searchInput = document.getElementById('searchInput');
                 if (searchInput) searchInput.value = '';
-                
+
                 document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
                 document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
-                
+
                 this.applyFilters();
             }
 
@@ -2281,7 +2331,7 @@
         function sortGPUs(criteria) {
             if (window.database) {
                 let result = [...window.database.filteredData];
-                
+
                 result.sort((a, b) => {
                     if (criteria === 'price') {
                         return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
@@ -2291,7 +2341,7 @@
                         return bFPS - aFPS;
                     }
                 });
-                
+
                 window.database.filteredData = result;
                 window.database.renderGPUs();
             }
@@ -2316,7 +2366,7 @@
         // Initialize the database
         document.addEventListener('DOMContentLoaded', () => {
             window.database = new MobileGPUDatabase();
-            
+
             // Smooth navigation handling
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
@@ -2369,6 +2419,13 @@
             });
         });
 
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TZNJPF8XZ3');
+
         // Service Worker Registration for PWA
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -2377,6 +2434,9 @@
                     .catch(error => console.log('SW registration failed'));
             });
         }
+
+
     </script>
 </body>
+
 </html>
