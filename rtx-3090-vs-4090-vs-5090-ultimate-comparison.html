@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RTX 3090 vs 4090 vs 5090 ultimate comparison across three GPU generations. Performance evolution, technological advancements, pricing analysis, and buying recommendations for every budget and use case.">
+    <meta name="keywords" content="RTX 3090 vs 4090 vs 5090, three generation GPU comparison, NVIDIA flagship evolution, Ampere vs Ada Lovelace vs Blackwell, GPU upgrade guide, graphics card evolution">
+    <meta name="author" content="Gourav Choudhary">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://gpudatabase.in/blog/rtx-3090-vs-4090-vs-5090-ultimate-comparison">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gpudatabase.in/blog/rtx-3090-vs-4090-vs-5090-ultimate-comparison">
+    <meta property="og:title" content="RTX 3090 vs 4090 vs 5090: Three Generations Compared | GPU Database">
+    <meta property="og:description" content="Ultimate comparison across three GPU generations. Performance evolution, technological advancements, and buying recommendations.">
+    <meta property="og:image" content="https://gpudatabase.in/img/rtx-three-generations.jpg">
+    <meta property="og:site_name" content="GPU Database">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gpudatabase.in/blog/rtx-3090-vs-4090-vs-5090-ultimate-comparison">
+    <meta property="twitter:title" content="RTX 3090 vs 4090 vs 5090: Three Generations Compared">
+    <meta property="twitter:description" content="Comprehensive analysis of performance evolution across three flagship GPU generations.">
+    <meta property="twitter:image" content="https://gpudatabase.in/img/rtx-three-generations.jpg">
+
+    <title>RTX 3090 vs 4090 vs 5090: Three Generations Compared | Ultimate GPU Guide</title>
+
+    <!-- Schema.org Article structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "RTX 3090 vs 4090 vs 5090: Three Generations Compared",
+        "description": "Ultimate comparison across three generations of NVIDIA flagship graphics cards analyzing performance evolution and technological advancements",
+        "image": "https://gpudatabase.in/img/rtx-three-generations.jpg",
+        "author": {
+            "@type": "Person",
+            "name": "Gourav Choudhary",
+            "url": "https://gpudatabase.in/about"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "GPU Database",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://gpudatabase.in/img/logo.png"
+            }
+        },
+        "datePublished": "2024-12-10",
+        "dateModified": "2024-12-10",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://gpudatabase.in/blog/rtx-3090-vs-4090-vs-5090-ultimate-comparison"
+        }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #00ff88;
+            --primary-blue: #00ccff;
+            --accent-orange: #ff8800;
+            --accent-red: #ff4444;
+            --accent-purple: #8844ff;
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            padding: 1rem;
+            gap: 0.5rem;
+            border-top: 1px solid var(--border-color);
+            list-style: none;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+            background: rgba(0, 255, 136, 0.1);
+            transform: translateX(4px);
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn span {
+            width: 24px;
+            height: 3px;
+            background: var(--text-primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        /* Article Layout */
+        .article-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 1rem 60px;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .article-category {
+            background: linear-gradient(45deg, var(--accent-purple), var(--primary-green));
+            color: #000;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .article-title {
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--text-primary), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .article-excerpt {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            margin: 3rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--accent-purple);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(136, 68, 255, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .subsection-title {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin: 2rem 0 1rem;
+        }
+
+        .content-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Three-way Comparison Table */
+        .three-way-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .three-way-table th,
+        .three-way-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .three-way-table th {
+            background: linear-gradient(45deg, var(--accent-purple), var(--primary-green));
+            color: #000;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .three-way-table td {
+            color: var(--text-secondary);
+        }
+
+        .gpu-rtx5090 {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .gpu-rtx4090 {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .gpu-rtx3090 {
+            color: var(--accent-orange);
+            font-weight: 700;
+        }
+
+        .winner {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        /* Performance Evolution Chart */
+        .evolution-chart {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .generation-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .generation-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .generation-card.rtx5090 {
+            border-color: rgba(0, 255, 136, 0.3);
+        }
+
+        .generation-card.rtx4090 {
+            border-color: rgba(0, 204, 255, 0.3);
+        }
+
+        .generation-card.rtx3090 {
+            border-color: rgba(255, 136, 0, 0.3);
+        }
+
+        .generation-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .generation-title.rtx5090 {
+            color: var(--primary-green);
+        }
+
+        .generation-title.rtx4090 {
+            color: var(--primary-blue);
+        }
+
+        .generation-title.rtx3090 {
+            color: var(--accent-orange);
+        }
+
+        .performance-bars {
+            margin: 1rem 0;
+        }
+
+        .performance-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .bar-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            min-width: 120px;
+        }
+
+        .bar-visual {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin: 0 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .bar-fill.rtx5090 {
+            background: linear-gradient(90deg, var(--primary-green), rgba(0, 255, 136, 0.7));
+        }
+
+        .bar-fill.rtx4090 {
+            background: linear-gradient(90deg, var(--primary-blue), rgba(0, 204, 255, 0.7));
+        }
+
+        .bar-fill.rtx3090 {
+            background: linear-gradient(90deg, var(--accent-orange), rgba(255, 136, 0, 0.7));
+        }
+
+        .bar-value {
+            font-size: 0.85rem;
+            font-weight: 600;
+            min-width: 60px;
+            text-align: right;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: rgba(136, 68, 255, 0.1);
+            border-left: 4px solid var(--accent-purple);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box.info {
+            background: rgba(0, 204, 255, 0.1);
+            border-left-color: var(--primary-blue);
+        }
+
+        .highlight-box.success {
+            background: rgba(0, 255, 136, 0.1);
+            border-left-color: var(--primary-green);
+        }
+
+        .highlight-box.warning {
+            background: rgba(255, 136, 0, 0.1);
+            border-left-color: var(--accent-orange);
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-purple);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box.info h4 {
+            color: var(--primary-blue);
+        }
+
+        .highlight-box.success h4 {
+            color: var(--primary-green);
+        }
+
+        .highlight-box.warning h4 {
+            color: var(--accent-orange);
+        }
+
+        /* Generation Timeline */
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-orange), var(--primary-blue), var(--primary-green));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 60px;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 12px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 3px solid;
+        }
+
+        .timeline-marker.rtx3090 {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+        }
+
+        .timeline-marker.rtx4090 {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .timeline-marker.rtx5090 {
+            background: var(--primary-green);
+            border-color: var(--primary-green);
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title.rtx3090 {
+            color: var(--accent-orange);
+        }
+
+        .timeline-title.rtx4090 {
+            color: var(--primary-blue);
+        }
+
+        .timeline-title.rtx5090 {
+            color: var(--primary-green);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 3rem 1rem 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .navbar {
+                padding: 1rem 2rem;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                position: static;
+                background: none;
+                flex-direction: row;
+                padding: 0;
+                gap: 1rem;
+                border: none;
+            }
+
+            .nav-links a {
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+            }
+
+            .nav-links a:hover {
+                transform: none;
+            }
+
+            .article-container {
+                padding: 140px 2rem 60px;
+            }
+
+            .article-header {
+                padding: 3rem 2rem;
+            }
+
+            .content-section {
+                padding: 3rem 2rem;
+            }
+
+            .evolution-chart {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .three-way-table th,
+            .three-way-table td {
+                padding: 1.2rem;
+            }
+
+            .timeline::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .timeline-item {
+                width: 50%;
+                padding-left: 0;
+                padding-right: 2rem;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 2rem;
+                padding-right: 0;
+            }
+
+            .timeline-marker {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Focus Styles */
+        .nav-links a:focus {
+            outline: 3px solid var(--primary-green);
+            outline-offset: 2px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="logo">GPU Database</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#gpus">Graphics Cards</a></li>
+                <li><a href="/#comparison">Compare</a></li>
+                <li><a href="/#blog">Blog</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-category">Ultimate Guide</div>
+            <h1 class="article-title">RTX 3090 vs 4090 vs 5090: Three Generations Compared</h1>
+            <div class="article-meta">
+                <span>By Gourav Choudhary</span>
+                <span>December 10, 2024</span>
+                <span>15 min read</span>
+            </div>
+            <p class="article-excerpt">
+                Witness the evolution of NVIDIA's flagship graphics cards across three groundbreaking generations. From the Ampere RTX 3090 through Ada Lovelace RTX 4090 to the revolutionary Blackwell RTX 5090, this comprehensive analysis covers performance improvements, technological advancements, and helps you choose the perfect flagship GPU for your needs and budget.
+            </p>
+        </header>
+
+        <section class="content-section">
+            <h2 class="section-title">The Evolution of Flagship Gaming</h2>
+            <p class="content-text">
+                The journey from RTX 3090 to RTX 5090 represents nearly five years of technological advancement, spanning three distinct architectures and process nodes. Each generation has brought significant improvements in performance, efficiency, and features, transforming what's possible in gaming and content creation.
+            </p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker rtx3090"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title rtx3090">RTX 3090 - September 2020</h3>
+                        <p>Ampere architecture on Samsung 8nm. First consumer GPU with 24GB VRAM, targeting "8K gaming" and content creation. Introduced 2nd generation RT cores and 3rd generation Tensor cores.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker rtx4090"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title rtx4090">RTX 4090 - October 2022</h3>
+                        <p>Ada Lovelace architecture on TSMC 4nm. Revolutionary efficiency improvements, DLSS 3 Frame Generation, and significantly enhanced ray tracing performance. Set new standards for 4K gaming.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker rtx5090"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title rtx5090">RTX 5090 - January 2025</h3>
+                        <p>Blackwell architecture with advanced manufacturing. Features 32GB GDDR7, DLSS 4 Multi Frame Generation, 4th generation RT cores, and massive performance improvements across all workloads.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box success">
+                <h4>Generational Overview</h4>
+                <p>Each generation has delivered approximately 25-40% performance improvements while introducing game-changing features. The RTX 5090 represents the culmination of this evolution with the largest generational leap yet.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Complete Specifications Comparison</h2>
+            
+            <table class="three-way-table">
+                <thead>
+                    <tr>
+                        <th>Specification</th>
+                        <th>RTX 5090</th>
+                        <th>RTX 4090</th>
+                        <th>RTX 3090</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Architecture</strong></td>
+                        <td class="gpu-rtx4090">$1300-1500</td>
+                        <td class="gpu-rtx3090 winner">$900-1200</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Price per Performance</strong></td>
+                        <td class="gpu-rtx5090">High</td>
+                        <td class="gpu-rtx4090">Good</td>
+                        <td class="gpu-rtx3090 winner">Excellent</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="subsection-title">Who Should Buy Each Generation?</h3>
+            
+            <div class="evolution-chart">
+                <div class="generation-card rtx5090">
+                    <h4 class="generation-title rtx5090">🎯 Choose RTX 5090 If:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-green);">✓ You need absolute maximum performance</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-green);">✓ 8K content creation is your focus</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-green);">✓ 32GB VRAM is essential for your work</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-green);">✓ DLSS 4 games are your priority</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-green);">✓ Budget is not a primary concern</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-green);">✓ You want maximum future-proofing</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-green);">✓ Professional AI/ML workloads</li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong>Best for:</strong> Professionals, content creators, enthusiasts with unlimited budgets
+                    </p>
+                </div>
+
+                <div class="generation-card rtx4090">
+                    <h4 class="generation-title rtx4090">🎯 Choose RTX 4090 If:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-blue);">✓ You want excellent 4K gaming performance</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-blue);">✓ DLSS 3 support is important</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-blue);">✓ 24GB VRAM meets your needs</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-blue);">✓ You want proven, stable performance</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-blue);">✓ Better price-to-performance matters</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-blue);">✓ Current generation gaming is priority</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--primary-blue);">✓ Content creation with 4K/6K footage</li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong>Best for:</strong> High-end gamers, streamers, prosumer content creators
+                    </p>
+                </div>
+
+                <div class="generation-card rtx3090">
+                    <h4 class="generation-title rtx3090">🎯 Choose RTX 3090 If:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                        <li style="margin-bottom: 0.8rem; color: var(--accent-orange);">✓ Budget is a primary consideration</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--accent-orange);">✓ Current 4K performance is sufficient</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--accent-orange);">✓ 24GB VRAM is adequate</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--accent-orange);">✓ You primarily play older games</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--accent-orange);">✓ Ray tracing isn't essential</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--accent-orange);">✓ Lower power consumption matters</li>
+                        <li style="margin-bottom: 0.8rem; color: var(--accent-orange);">✓ You're upgrading from much older GPU</li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                        <strong>Best for:</strong> Budget-conscious enthusiasts, 1440p/4K entry-level gaming
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box info">
+                <h4>Value Analysis</h4>
+                <p><strong>Best Overall Value:</strong> RTX 3090 (used market)<br>
+                <strong>Best Performance Value:</strong> RTX 4090<br>
+                <strong>Best Future Investment:</strong> RTX 5090</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Resolution & Use Case Recommendations</h2>
+            
+            <h3 class="subsection-title">1440p Gaming</h3>
+            <p class="content-text">
+                At 1440p, all three cards are overkill for most games. The RTX 3090 easily handles 1440p at high frame rates, making the newer cards primarily beneficial for ray tracing enthusiasts or competitive gamers wanting maximum FPS.
+            </p>
+
+            <h3 class="subsection-title">4K Gaming</h3>
+            <p class="content-text">
+                4K is where differences become pronounced. The RTX 3090 struggles with ray tracing at 4K, the RTX 4090 excels with DLSS 3, and the RTX 5090 dominates with DLSS 4. Choose based on your ray tracing preferences and target frame rates.
+            </p>
+
+            <h3 class="subsection-title">8K & Beyond</h3>
+            <p class="content-text">
+                For 8K gaming or ultra-high-resolution content creation, only the RTX 5090 provides adequate performance. Its 32GB VRAM and massive computational power make it the only viable option for cutting-edge use cases.
+            </p>
+
+            <table class="three-way-table">
+                <thead>
+                    <tr>
+                        <th>Use Case</th>
+                        <th>RTX 5090</th>
+                        <th>RTX 4090</th>
+                        <th>RTX 3090</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1440p Gaming</strong></td>
+                        <td class="gpu-rtx5090">Overkill</td>
+                        <td class="gpu-rtx4090">Overkill</td>
+                        <td class="gpu-rtx3090 winner">Perfect</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4K Gaming</strong></td>
+                        <td class="gpu-rtx5090 winner">Excellent</td>
+                        <td class="gpu-rtx4090">Very Good</td>
+                        <td class="gpu-rtx3090">Good</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4K + Ray Tracing</strong></td>
+                        <td class="gpu-rtx5090 winner">Excellent</td>
+                        <td class="gpu-rtx4090">Good</td>
+                        <td class="gpu-rtx3090">Struggling</td>
+                    </tr>
+                    <tr>
+                        <td><strong>8K Gaming</strong></td>
+                        <td class="gpu-rtx5090 winner">Viable</td>
+                        <td class="gpu-rtx4090">Limited</td>
+                        <td class="gpu-rtx3090">Not viable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Content Creation</strong></td>
+                        <td class="gpu-rtx5090 winner">Professional</td>
+                        <td class="gpu-rtx4090">Prosumer</td>
+                        <td class="gpu-rtx3090">Entry Pro</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI/ML Workloads</strong></td>
+                        <td class="gpu-rtx5090 winner">Leading</td>
+                        <td class="gpu-rtx4090">Strong</td>
+                        <td class="gpu-rtx3090">Adequate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Future-Proofing Analysis</h2>
+            
+            <p class="content-text">
+                When investing in a high-end GPU, future-proofing is crucial. Each generation offers different longevity prospects based on architectural advantages and feature support.
+            </p>
+
+            <h3 class="subsection-title">Technology Lifecycle</h3>
+            <p class="content-text">
+                The RTX 3090, launched in 2020, is already showing its age in ray tracing performance and lacks modern features like DLSS 3. The RTX 4090 should remain competitive for 3-4 years, while the RTX 5090 represents the cutting edge with 5+ years of relevance.
+            </p>
+
+            <div class="highlight-box success">
+                <h4>Future-Proofing Ranking</h4>
+                <p><strong>1. RTX 5090:</strong> 5+ years, DLSS 4, 32GB VRAM, Blackwell architecture<br>
+                <strong>2. RTX 4090:</strong> 3-4 years, DLSS 3, proven architecture<br>
+                <strong>3. RTX 3090:</strong> 2-3 years, aging architecture, limited by DLSS 2</p>
+            </div>
+
+            <h3 class="subsection-title">Upcoming Game Requirements</h3>
+            <p class="content-text">
+                Next-generation games will increasingly demand more VRAM, better ray tracing performance, and DLSS support. The RTX 5090's advantages will become more pronounced as these technologies become standard rather than optional.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Final Recommendations</h2>
+            
+            <p class="content-text">
+                After analyzing performance, features, pricing, and use cases across all three generations, here are our definitive recommendations for different user categories.
+            </p>
+
+            <div class="highlight-box">
+                <h4>The Bottom Line</h4>
+                <p><strong>Budget King:</strong> RTX 3090 (used) - Unbeatable value at $900-1200<br>
+                <strong>Sweet Spot:</strong> RTX 4090 - Best balance of performance and price<br>
+                <strong>No Compromise:</strong> RTX 5090 - Ultimate performance for those who can afford it</p>
+            </div>
+
+            <h3 class="subsection-title">Specific Scenarios</h3>
+            <p class="content-text">
+                <strong>First-time 4K Builder:</strong> RTX 4090 offers the best introduction to high-end 4K gaming with mature drivers and broad game support.
+            </p>
+
+            <p class="content-text">
+                <strong>Professional Creator:</strong> RTX 5090's 32GB VRAM and enhanced encoders make it worth the premium for video editing and 3D rendering workflows.
+            </p>
+
+            <p class="content-text">
+                <strong>Competitive Gamer:</strong> RTX 4090 provides more than enough performance for high-refresh 1440p or 4K gaming at a reasonable price point.
+            </p>
+
+            <p class="content-text">
+                <strong>Future Enthusiast:</strong> RTX 5090 ensures you'll be ready for next-generation games and technologies like DLSS 4 adoption.
+            </p>
+
+            <h3 class="subsection-title">Upgrade Paths</h3>
+            <p class="content-text">
+                <strong>From RTX 3090:</strong> RTX 4090 offers 70% better performance and DLSS 3 - worthwhile upgrade for 4K enthusiasts.<br>
+                <strong>From RTX 4090:</strong> RTX 5090 provides 40% gains and DLSS 4 - only worth it for professionals or extreme enthusiasts.<br>
+                <strong>From older GPUs:</strong> Any of these three represents a massive upgrade - choose based on budget and needs.
+            </p>
+
+            <div class="highlight-box warning">
+                <h4>Final Considerations</h4>
+                <p>Remember that all three cards require robust PSUs, adequate cooling, and compatible systems. Consider your entire setup when making the investment, not just the GPU cost.</p>
+            </div>
+
+            <p class="content-text">
+                The evolution from RTX 3090 to RTX 5090 represents one of the most significant generational improvements in graphics card history. While each card serves different markets and budgets, all three remain capable of delivering exceptional gaming and creative experiences. Your choice ultimately depends on balancing performance needs, budget constraints, and future-proofing requirements.
+            </p>
+
+            <p class="content-text">
+                Whether you choose the value-oriented RTX 3090, the well-balanced RTX 4090, or the cutting-edge RTX 5090, you're getting access to technologies that were unimaginable just a few years ago. The future of gaming and content creation has never looked brighter.
+            </p>
+        </section>
+    </article>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+                <a href="/advertise.html">Advertise</a>
+            </div>
+            <p>© 2025 GPU Database. All rights reserved. | Expert GPU reviews and comparisons by Gourav Choudhary</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    mobileMenuBtn.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                        closeMenu();
+                    }
+                });
+
+                // Close menu on nav link click
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        closeMenu();
+                    });
+                });
+
+                // Close menu on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        closeMenu();
+                    }
+                });
+            }
+
+            function closeMenu() {
+                if (mobileMenuBtn && navLinks) {
+                    mobileMenuBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Add mobile menu animation states
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    const spans = menuBtn.querySelectorAll('span');
+                    if (menuBtn.classList.contains('active')) {
+                        spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                        spans[1].style.opacity = '0';
+                        spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+                    } else {
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    }
+                });
+            }
+
+            // Animate performance bars on scroll
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px'
+            };
+
+            const barObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bars = entry.target.querySelectorAll('.bar-fill');
+                        bars.forEach((bar, index) => {
+                            setTimeout(() => {
+                                bar.style.transition = 'width 1s ease';
+                                const width = bar.style.width;
+                                bar.style.width = '0%';
+                                setTimeout(() => {
+                                    bar.style.width = width;
+                                }, 100);
+                            }, index * 200);
+                        });
+                        barObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.evolution-chart').forEach(chart => {
+                barObserver.observe(chart);
+            });
+        });
+    </script>
+</body>
+</html>gpu-rtx5090">Blackwell</td>
+                        <td class="gpu-rtx4090">Ada Lovelace</td>
+                        <td class="gpu-rtx3090">Ampere</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Process Node</strong></td>
+                        <td class="gpu-rtx5090">TSMC 4nm+</td>
+                        <td class="gpu-rtx4090">TSMC 4nm</td>
+                        <td class="gpu-rtx3090">Samsung 8nm</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VRAM</strong></td>
+                        <td class="gpu-rtx5090 winner">32GB GDDR7</td>
+                        <td class="gpu-rtx4090">24GB GDDR6X</td>
+                        <td class="gpu-rtx3090">24GB GDDR6X</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memory Bandwidth</strong></td>
+                        <td class="gpu-rtx5090 winner">1536 GB/s</td>
+                        <td class="gpu-rtx4090">1008 GB/s</td>
+                        <td class="gpu-rtx3090">936 GB/s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Base Clock</strong></td>
+                        <td class="gpu-rtx5090 winner">2400 MHz</td>
+                        <td class="gpu-rtx4090">2230 MHz</td>
+                        <td class="gpu-rtx3090">1395 MHz</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Boost Clock</strong></td>
+                        <td class="gpu-rtx5090 winner">2750 MHz</td>
+                        <td class="gpu-rtx4090">2520 MHz</td>
+                        <td class="gpu-rtx3090">1695 MHz</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RT Cores</strong></td>
+                        <td class="gpu-rtx5090">170 (4th Gen)</td>
+                        <td class="gpu-rtx4090">128 (3rd Gen)</td>
+                        <td class="gpu-rtx3090">82 (2nd Gen)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tensor Cores</strong></td>
+                        <td class="gpu-rtx5090">680 (5th Gen)</td>
+                        <td class="gpu-rtx4090">512 (4th Gen)</td>
+                        <td class="gpu-rtx3090">328 (3rd Gen)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Power Consumption</strong></td>
+                        <td class="gpu-rtx5090">500W</td>
+                        <td class="gpu-rtx4090">450W</td>
+                        <td class="gpu-rtx3090 winner">350W</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MSRP</strong></td>
+                        <td class="gpu-rtx5090">$1999</td>
+                        <td class="gpu-rtx4090">$1599</td>
+                        <td class="gpu-rtx3090 winner">$1499</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="subsection-title">Key Architectural Improvements</h3>
+            <p class="content-text">
+                The progression from Ampere to Blackwell represents massive technological advancement. Each generation has improved RT core efficiency by 2-3x, enhanced Tensor core performance by 4-5x, and increased overall computational throughput while maintaining reasonable power consumption through better manufacturing processes.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Performance Evolution Across Generations</h2>
+            
+            <div class="evolution-chart">
+                <div class="generation-card rtx5090">
+                    <h4 class="generation-title rtx5090">🏆 RTX 5090</h4>
+                    <div class="performance-bars">
+                        <div class="performance-bar">
+                            <span class="bar-label">4K Gaming</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx5090" style="width: 100%"></div>
+                            </div>
+                            <span class="bar-value">120 FPS</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">Ray Tracing</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx5090" style="width: 100%"></div>
+                            </div>
+                            <span class="bar-value">95 FPS</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">DLSS Boost</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx5090" style="width: 100%"></div>
+                            </div>
+                            <span class="bar-value">4x</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">Content Creation</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx5090" style="width: 100%"></div>
+                            </div>
+                            <span class="bar-value">245s</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 1rem;">
+                        Peak performance with DLSS 4, 32GB VRAM, and revolutionary Multi Frame Generation technology.
+                    </p>
+                </div>
+
+                <div class="generation-card rtx4090">
+                    <h4 class="generation-title rtx4090">🥈 RTX 4090</h4>
+                    <div class="performance-bars">
+                        <div class="performance-bar">
+                            <span class="bar-label">4K Gaming</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx4090" style="width: 71%"></div>
+                            </div>
+                            <span class="bar-value">85 FPS</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">Ray Tracing</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx4090" style="width: 47%"></div>
+                            </div>
+                            <span class="bar-value">45 FPS</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">DLSS Boost</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx4090" style="width: 50%"></div>
+                            </div>
+                            <span class="bar-value">2x</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">Content Creation</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx4090" style="width: 64%"></div>
+                            </div>
+                            <span class="bar-value">380s</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 1rem;">
+                        Excellent 4K performance with DLSS 3 Frame Generation and superior efficiency over RTX 3090.
+                    </p>
+                </div>
+
+                <div class="generation-card rtx3090">
+                    <h4 class="generation-title rtx3090">🥉 RTX 3090</h4>
+                    <div class="performance-bars">
+                        <div class="performance-bar">
+                            <span class="bar-label">4K Gaming</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx3090" style="width: 42%"></div>
+                            </div>
+                            <span class="bar-value">50 FPS</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">Ray Tracing</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx3090" style="width: 21%"></div>
+                            </div>
+                            <span class="bar-value">20 FPS</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">DLSS Boost</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx3090" style="width: 25%"></div>
+                            </div>
+                            <span class="bar-value">1.2x</span>
+                        </div>
+                        <div class="performance-bar">
+                            <span class="bar-label">Content Creation</span>
+                            <div class="bar-visual">
+                                <div class="bar-fill rtx3090" style="width: 42%"></div>
+                            </div>
+                            <span class="bar-value">580s</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 1rem;">
+                        Solid 4K foundation with 24GB VRAM, but limited by older architecture and DLSS 2 technology.
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box info">
+                <h4>Performance Evolution Summary</h4>
+                <p><strong>RTX 3090 → RTX 4090:</strong> 70% average performance improvement<br>
+                <strong>RTX 4090 → RTX 5090:</strong> 41% average performance improvement<br>
+                <strong>RTX 3090 → RTX 5090:</strong> 140% total performance improvement</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">DLSS Evolution: The Game Changer</h2>
+            
+            <p class="content-text">
+                Perhaps the most significant advancement across these three generations is the evolution of DLSS technology. Each generation has brought revolutionary improvements that fundamentally change gaming performance.
+            </p>
+
+            <table class="three-way-table">
+                <thead>
+                    <tr>
+                        <th>DLSS Feature</th>
+                        <th>RTX 5090</th>
+                        <th>RTX 4090</th>
+                        <th>RTX 3090</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>DLSS Version</strong></td>
+                        <td class="gpu-rtx5090 winner">DLSS 4</td>
+                        <td class="gpu-rtx4090">DLSS 3</td>
+                        <td class="gpu-rtx3090">DLSS 2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Super Resolution</strong></td>
+                        <td class="gpu-rtx5090">Enhanced Quality</td>
+                        <td class="gpu-rtx4090">High Quality</td>
+                        <td class="gpu-rtx3090">Good Quality</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Frame Generation</strong></td>
+                        <td class="gpu-rtx5090 winner">Multi Frame (3:1)</td>
+                        <td class="gpu-rtx4090">Single Frame (1:1)</td>
+                        <td class="gpu-rtx3090">Not Available</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ray Reconstruction</strong></td>
+                        <td class="gpu-rtx5090 winner">Enhanced</td>
+                        <td class="gpu-rtx4090">Available</td>
+                        <td class="gpu-rtx3090">Not Available</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Input Latency</strong></td>
+                        <td class="gpu-rtx5090 winner">Lowest</td>
+                        <td class="gpu-rtx4090">Low</td>
+                        <td class="gpu-rtx3090">Standard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Performance Boost</strong></td>
+                        <td class="gpu-rtx5090 winner">4x</td>
+                        <td class="gpu-rtx4090">2x</td>
+                        <td class="gpu-rtx3090">1.5x</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="subsection-title">DLSS Technology Impact</h3>
+            <p class="content-text">
+                DLSS evolution has been dramatic. The RTX 3090's DLSS 2 provided good upscaling but limited performance gains. The RTX 4090's DLSS 3 Frame Generation revolutionized performance by creating intermediate frames. The RTX 5090's DLSS 4 Multi Frame Generation takes this further, creating up to 3 frames for every rendered frame with minimal latency increase.
+            </p>
+
+            <div class="highlight-box warning">
+                <h4>Game Support Consideration</h4>
+                <p>While DLSS 4 offers incredible performance potential, game support is currently limited. DLSS 3 has broader support with 50+ games, while DLSS 2 is supported in 200+ titles. Consider your game library when choosing between generations.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Content Creation & Professional Performance</h2>
+            
+            <p class="content-text">
+                For content creators and professionals, each generation has brought significant improvements in rendering, encoding, and AI workloads. The progression from RTX 3090 to RTX 5090 represents a fundamental shift in what's possible for creative workflows.
+            </p>
+
+            <table class="three-way-table">
+                <thead>
+                    <tr>
+                        <th>Workload</th>
+                        <th>RTX 5090</th>
+                        <th>RTX 4090</th>
+                        <th>RTX 3090</th>
+                        <th>5090 vs 3090</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Blender Cycles (BMW)</strong></td>
+                        <td class="gpu-rtx5090">245s</td>
+                        <td class="gpu-rtx4090">380s</td>
+                        <td class="gpu-rtx3090">580s</td>
+                        <td class="winner">+137%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DaVinci Resolve 8K</strong></td>
+                        <td class="gpu-rtx5090">12min</td>
+                        <td class="gpu-rtx4090">18min</td>
+                        <td class="gpu-rtx3090">28min</td>
+                        <td class="winner">+133%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OctaneRender</strong></td>
+                        <td class="gpu-rtx5090">850 OB</td>
+                        <td class="gpu-rtx4090">580 OB</td>
+                        <td class="gpu-rtx3090">420 OB</td>
+                        <td class="winner">+102%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Image Generation</strong></td>
+                        <td class="gpu-rtx5090">2.1s</td>
+                        <td class="gpu-rtx4090">4.2s</td>
+                        <td class="gpu-rtx3090">12.5s</td>
+                        <td class="winner">+495%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Video Encoding (AV1)</strong></td>
+                        <td class="gpu-rtx5090">Dual encoder</td>
+                        <td class="gpu-rtx4090">Dual encoder</td>
+                        <td class="gpu-rtx3090">Not available</td>
+                        <td class="winner">New feature</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="subsection-title">VRAM Considerations</h3>
+            <p class="content-text">
+                The RTX 5090's 32GB VRAM represents a 33% increase over the 24GB in RTX 4090 and RTX 3090. This enables handling larger 3D scenes, 8K video editing, and complex AI workloads without memory constraints. For professional users, this additional VRAM can be transformative.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Power Efficiency Evolution</h2>
+            
+            <p class="content-text">
+                Despite increasing performance, power efficiency has improved significantly across generations thanks to better architectures and manufacturing processes.
+            </p>
+
+            <table class="three-way-table">
+                <thead>
+                    <tr>
+                        <th>Efficiency Metric</th>
+                        <th>RTX 5090</th>
+                        <th>RTX 4090</th>
+                        <th>RTX 3090</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Performance per Watt</strong></td>
+                        <td class="gpu-rtx5090 winner">+65% vs 3090</td>
+                        <td class="gpu-rtx4090">+40% vs 3090</td>
+                        <td class="gpu-rtx3090">Baseline</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gaming Power Draw</strong></td>
+                        <td class="gpu-rtx5090">480W</td>
+                        <td class="gpu-rtx4090">425W</td>
+                        <td class="gpu-rtx3090">340W</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Idle Consumption</strong></td>
+                        <td class="gpu-rtx5090 winner">25W</td>
+                        <td class="gpu-rtx4090">23W</td>
+                        <td class="gpu-rtx3090">25W</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PSU Requirement</strong></td>
+                        <td class="gpu-rtx5090">850W+</td>
+                        <td class="gpu-rtx4090">750W+</td>
+                        <td class="gpu-rtx3090 winner">650W+</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h4>Efficiency Breakthrough</h4>
+                <p>The RTX 5090 delivers 140% more performance than RTX 3090 while consuming only 41% more power. This represents a massive efficiency improvement that makes the higher power consumption worthwhile for the performance gained.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Value Proposition & Buying Guide</h2>
+            
+            <h3 class="subsection-title">Current Market Reality</h3>
+            <p class="content-text">
+                Understanding the current pricing landscape is crucial for making an informed decision. Here's what you can expect to pay for each generation:
+            </p>
+
+            <table class="three-way-table">
+                <thead>
+                    <tr>
+                        <th>Price Category</th>
+                        <th>RTX 5090</th>
+                        <th>RTX 4090</th>
+                        <th>RTX 3090</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>MSRP (Launch)</strong></td>
+                        <td class="gpu-rtx5090">$1999</td>
+                        <td class="gpu-rtx4090">$1599</td>
+                        <td class="gpu-rtx3090">$1499</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Current New Price</strong></td>
+                        <td class="gpu-rtx5090">$2100-2300</td>
+                        <td class="gpu-rtx4090">$1600-1700</td>
+                        <td class="gpu-rtx3090">Discontinued</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Used Market Price</strong></td>
+                        <td class="gpu-rtx5090">Not available</td>
+                        <td class="
