@@ -567,6 +567,9 @@
                         closeMenu();
                     }
                 });
+
+                // Add focus trap for mobile menu
+                trapFocus(navLinks);
             }
 
             function closeMenu() {
@@ -576,7 +579,33 @@
                     document.body.style.overflow = '';
                 }
             }
+
+            // Add focus trap function
+            function trapFocus(element) {
+                const focusableElements = element.querySelectorAll(
+                    'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+                );
+                const firstFocusableElement = focusableElements[0];
+                const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+                element.addEventListener('keydown', (e) => {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey) {
+                            if (document.activeElement === firstFocusableElement) {
+                                lastFocusableElement.focus();
+                                e.preventDefault();
+                            }
+                        } else {
+                            if (document.activeElement === lastFocusableElement) {
+                                firstFocusableElement.focus();
+                                e.preventDefault();
+                            }
+                        }
+                    }
+                });
+            }
         });
     </script>
+>>>>>>> REPLACE
 </body>
 </html>
