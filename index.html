@@ -3,7 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, maximum-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+    
+    <!-- DNS Prefetching for External Resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//google-analytics.com">
+    <link rel="dns-prefetch" href="//googletagmanager.com">
+    
+    <!-- Progressive Web App -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="GPU Database">
+    <meta name="application-name" content="GPU Database">
+    <meta name="msapplication-TileColor" content="#00ff88">
+    <meta name="theme-color" content="#00ff88" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#00ff88" media="(prefers-color-scheme: light)">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#00ff88">
 
     <!-- Enhanced SEO Meta Tags -->
     <meta name="description"
@@ -116,6 +143,16 @@
         "mainEntity": [
             {
                 "@type": "Article",
+                "headline": "NVIDIA GeForce RTX 60 Series Rumors & Leaks 2025",
+                "url": "https://gpudatabase.in/blog/nvidia-geforce-rtx-60-series-rumors-leaks-2025",
+                "author": {
+                    "@type": "Person",
+                    "name": "Gourav Choudhary"
+                },
+                "datePublished": "2025-08-07"
+            },
+            {
+                "@type": "Article",
                 "headline": "RTX 5090 vs RTX 4090: Ultimate GPU Comparison",
                 "url": "https://gpudatabase.in/blog/rtx-5090-vs-4090-comparison",
                 "author": {
@@ -180,6 +217,65 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
+            /* Performance optimizations */
+            contain: layout style paint;
+            will-change: scroll-position;
+        }
+
+        /* Performance Optimizations */
+        .gpu-card,
+        .blog-card,
+        .news-card,
+        .guide-card {
+            contain: layout style paint;
+            will-change: transform, opacity;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        .navbar {
+            contain: layout style paint;
+            will-change: transform, background-color;
+        }
+
+        .hero-content,
+        .section {
+            contain: layout style;
+        }
+
+        /* Smooth animations with GPU acceleration */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 30px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translate3d(-30px, 0, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        /* Critical rendering optimizations */
+        .loaded {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .gpu-card:hover,
+        .blog-card:hover,
+        .news-card:hover {
+            transform: translate3d(0, -5px, 0);
+            will-change: transform;
         }
 
         /* Enhanced Mobile-First Navigation */
@@ -1406,6 +1502,58 @@
                 padding: 0.5rem 0.8rem;
                 font-size: 0.75rem;
             }
+
+            .hero {
+                padding: 8rem 1rem 4rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stat-item {
+                padding: 1rem;
+            }
+        }
+
+        /* Medium Mobile Screens */
+        @media (max-width: 480px) {
+            .gpu-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .comparison-tool {
+                padding: 1.5rem;
+            }
+
+            .comparison-dropdowns {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .chart-container {
+                height: 300px;
+            }
+
+            .search-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .search-input {
+                width: 100%;
+            }
         }
 
         /* High DPI displays */
@@ -1437,7 +1585,6 @@
         <div class="nav-content">
             <a href="#home" class="logo" aria-label="GPU Database Home">GPU Database</a>
             <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
-                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
                 <li><a href="#gpus" class="nav-link" data-section="gpus">Graphics Cards</a></li>
                 <li><a href="#comparison" class="nav-link" data-section="comparison">Compare</a></li>
                 <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
@@ -1499,6 +1646,39 @@
                 <p class="section-subtitle">In-depth analysis and comparisons of the latest NVIDIA RTX graphics cards by GPU expert Gourav Choudhary</p>
                 
                 <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <span class="blog-category">HIGH-END BATTLE</span>
+                            <time datetime="2025-08-07">August 7, 2025</time>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="blog-title">AMD RX 7900 XTX vs NVIDIA RTX 4080: Ultimate Battle 2025</h3>
+                        <p class="blog-excerpt">Epic showdown between AMD RX 7900 XTX and NVIDIA RTX 4080. Complete performance analysis, ray tracing comparison, and value assessment for 4K gaming enthusiasts.</p>
+                        <a href="blog/amd-rx-7900-xtx-vs-nvidia-rtx-4080-ultimate-battle-2025.html" class="blog-cta" aria-label="Read AMD vs NVIDIA battle comparison">Read Epic Battle</a>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <span class="blog-category">MID-RANGE COMPARISON</span>
+                            <time datetime="2025-08-07">August 7, 2025</time>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="blog-title">RTX 4060 Ti vs RTX 4070: Complete Comparison 2025</h3>
+                        <p class="blog-excerpt">Definitive comparison between RTX 4060 Ti and RTX 4070 for 1440p gaming. Performance analysis, value assessment, and clear buying recommendations for mid-range builders.</p>
+                        <a href="blog/rtx-4060-ti-vs-rtx-4070-complete-comparison-2025.html" class="blog-cta" aria-label="Read RTX 4060 Ti vs 4070 comparison">Read Comparison</a>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <span class="blog-category">RUMORS & LEAKS</span>
+                            <time datetime="2025-08-06">August 6, 2025</time>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="blog-title">NVIDIA GeForce RTX 60 Series Rumors & Leaks 2025</h3>
+                        <p class="blog-excerpt">Breaking news and speculation about NVIDIA's next-generation RTX 60 series. RTX 6090 and RTX 6080 predictions, Cobalt architecture details, DLSS 5.0, performance expectations, and release timeline analysis.</p>
+                        <a href="blog/nvidia-geforce-rtx-60-series-rumors-leaks-2025.html" class="blog-cta" aria-label="Read RTX 60 series rumors and predictions">Read Latest Rumors</a>
+                    </article>
+
                     <article class="blog-card">
                         <div class="blog-meta">
                             <span class="blog-category">COMPARISON</span>
@@ -3320,8 +3500,9 @@
                     
                     // Update navigation state
                     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                    const homeLink = document.querySelector('.nav-link[data-section="home"]');
-                    if (homeLink) homeLink.classList.add('active');
+                    // Set first nav link (Graphics Cards) as active when on home
+                    const firstNavLink = document.querySelector('.nav-link[data-section="gpus"]');
+                    if (firstNavLink) firstNavLink.classList.add('active');
                 });
             }
 
@@ -3613,6 +3794,50 @@
 
             lazyImages.forEach(img => imageObserver.observe(img));
         }
+
+        // Mobile touch optimizations
+        if ('ontouchstart' in window) {
+            // Add touch feedback for buttons
+            document.querySelectorAll('.cta-button, .filter-btn, .nav-links a').forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                    this.style.transition = 'transform 0.1s ease';
+                });
+                
+                element.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                    this.style.transition = '';
+                });
+            });
+
+            // Improve scroll performance on mobile
+            let ticking = false;
+            function updateScrollPosition() {
+                // Add scroll-based optimizations here
+                ticking = false;
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateScrollPosition);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', requestTick, { passive: true });
+        }
+
+        // Viewport height fix for mobile browsers
+        function setViewportHeight() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        setViewportHeight();
+        window.addEventListener('resize', setViewportHeight);
+        window.addEventListener('orientationchange', () => {
+            setTimeout(setViewportHeight, 100);
+        });
     </script>
 
     <!-- Enhanced structured data for better SEO -->
@@ -3665,6 +3890,211 @@
             "email": "gouravchoudharyofficial@gmail.com"
         }
     }
+    </script>
+
+    <!-- Performance Optimizations & Service Worker -->
+    <script>
+        // Service Worker Registration for PWA and Caching
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Critical resource optimization
+        window.addEventListener('DOMContentLoaded', () => {
+            // Lazy load non-critical CSS
+            const lazyStyles = [
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+            ];
+            
+            lazyStyles.forEach(href => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = href;
+                link.media = 'print';
+                link.onload = () => link.media = 'all';
+                document.head.appendChild(link);
+            });
+
+            // Preload next page resources
+            const links = document.querySelectorAll('a[href^="/blog/"]');
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    const href = link.getAttribute('href');
+                    if (href && !document.querySelector(`link[rel="prefetch"][href="${href}"]`)) {
+                        const prefetchLink = document.createElement('link');
+                        prefetchLink.rel = 'prefetch';
+                        prefetchLink.href = href;
+                        document.head.appendChild(prefetchLink);
+                    }
+                });
+            });
+        });
+
+        // Performance monitoring and Core Web Vitals
+        function measureWebVitals() {
+            // Largest Contentful Paint (LCP)
+            new PerformanceObserver((entryList) => {
+                for (const entry of entryList.getEntries()) {
+                    console.log('LCP candidate:', entry.startTime);
+                }
+            }).observe({entryTypes: ['largest-contentful-paint']});
+
+            // First Input Delay (FID)
+            new PerformanceObserver((entryList) => {
+                for (const entry of entryList.getEntries()) {
+                    console.log('FID:', entry.processingStart - entry.startTime);
+                }
+            }).observe({entryTypes: ['first-input']});
+
+            // Cumulative Layout Shift (CLS)
+            let clsValue = 0;
+            new PerformanceObserver((entryList) => {
+                for (const entry of entryList.getEntries()) {
+                    if (!entry.hadRecentInput) {
+                        clsValue += entry.value;
+                    }
+                }
+                console.log('CLS:', clsValue);
+            }).observe({entryTypes: ['layout-shift']});
+        }
+
+        // Initialize performance monitoring
+        if ('PerformanceObserver' in window) {
+            measureWebVitals();
+        }
+
+        // Enhanced image lazy loading with intersection observer
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                }
+            });
+        }, {
+            rootMargin: '50px 0px'
+        });
+
+        // Apply lazy loading to images
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = document.querySelectorAll('img[data-src]');
+            lazyImages.forEach(img => imageObserver.observe(img));
+        });
+
+        // Optimize animations for low-end devices
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (prefersReducedMotion.matches) {
+            document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+            document.documentElement.style.setProperty('--transition-duration', '0.01ms');
+        }
+
+        // Enhanced error tracking and reporting
+        window.addEventListener('error', (event) => {
+            console.error('Runtime error:', event.error);
+            // You can integrate with error tracking services here
+        });
+
+        window.addEventListener('unhandledrejection', (event) => {
+            console.error('Unhandled promise rejection:', event.reason);
+        });
+
+        // Preconnect to external domains for faster loading
+        function addPreconnect(href) {
+            const link = document.createElement('link');
+            link.rel = 'preconnect';
+            link.href = href;
+            link.crossOrigin = 'anonymous';
+            document.head.appendChild(link);
+        }
+
+        // Add preconnections
+        addPreconnect('https://fonts.googleapis.com');
+        addPreconnect('https://fonts.gstatic.com');
+        addPreconnect('https://cdn.jsdelivr.net');
+
+        // Optimize for Core Web Vitals
+        function optimizeForCWV() {
+            // Preload critical fonts
+            const fontPreload = document.createElement('link');
+            fontPreload.rel = 'preload';
+            fontPreload.as = 'font';
+            fontPreload.type = 'font/woff2';
+            fontPreload.href = 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2';
+            fontPreload.crossOrigin = 'anonymous';
+            document.head.appendChild(fontPreload);
+
+            // Optimize loading of non-critical resources
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Load non-critical content when it comes into view
+                        entry.target.classList.add('loaded');
+                    }
+                });
+            });
+
+            // Observe all GPU cards for lazy loading
+            document.querySelectorAll('.gpu-card').forEach(card => {
+                observer.observe(card);
+            });
+        }
+
+        // Initialize optimizations
+        document.addEventListener('DOMContentLoaded', optimizeForCWV);
+
+        // Critical CSS inlining for above-the-fold content
+        const criticalCSS = `
+            .hero-section { min-height: 100vh; }
+            .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; }
+            .hero-content { padding-top: 120px; }
+        `;
+        
+        const style = document.createElement('style');
+        style.textContent = criticalCSS;
+        document.head.appendChild(style);
+    </script>
+
+    <!-- Analytics and Performance Monitoring -->
+    <script>
+        // Basic analytics tracking (replace with your preferred analytics)
+        function trackEvent(eventName, eventData = {}) {
+            console.log('Event tracked:', eventName, eventData);
+            // Integration with Google Analytics, Plausible, or other analytics
+        }
+
+        // Track page performance
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                trackEvent('page_load_time', {
+                    loadTime: perfData.loadEventEnd - perfData.loadEventStart,
+                    domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+                    ttfb: perfData.responseStart - perfData.requestStart
+                });
+            }, 0);
+        });
+
+        // Track user interactions
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('a[href^="/blog/"]')) {
+                trackEvent('blog_click', {
+                    url: e.target.href,
+                    text: e.target.textContent
+                });
+            }
+        });
     </script>
 </body>
 </html>

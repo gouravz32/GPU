@@ -1,0 +1,52 @@
+{
+    "name": "GPU Database - Ultimate Graphics Card Information",
+    "short_name": "GPU Database",
+    "description": "The ultimate resource for NVIDIA RTX graphics card specifications, comparisons, reviews, and buying guides. Expert analysis by Gourav Choudhary.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f0f0f",
+    "theme_color": "#00ff88",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-US",
+    "categories": ["technology", "gaming", "hardware", "reviews"],
+    "screenshots": [
+        {
+            "src": "/img/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "/img/screenshot-mobile.png",
+            "sizes": "750x1334",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
+    ],
+    "icons": [
+        {
+            "src": "/img/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/icon-256.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/img/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/img/favicon.ico",
+            "sizes": "48x48",
+            "type": "image/x-icon"
+        }
+    ]
+}

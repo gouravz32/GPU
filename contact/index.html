@@ -508,6 +508,38 @@
                 height: 35px;
                 font-size: 1rem;
             }
+
+            .form-group input,
+            .form-group textarea {
+                font-size: 16px; /* Prevents zoom on iOS */
+                padding: 0.8rem;
+            }
+
+            .submit-btn {
+                width: 100%;
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .contact-item:hover {
+                transform: none;
+                background: rgba(0, 255, 136, 0.1);
+            }
+
+            .submit-btn:hover {
+                transform: none;
+            }
+
+            .nav-links a:hover {
+                transform: none;
+            }
         }
     </style>
 </head>
@@ -516,7 +548,6 @@
         <div class="nav-content">
             <a href="/" class="logo">GPU Database</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="/#gpus" class="nav-link">Graphics Cards</a></li>
                 <li><a href="/#comparison" class="nav-link">Compare</a></li>
                 <li><a href="/#guides" class="nav-link">Guides</a></li>
@@ -730,7 +761,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
->>>>>>> REPLACE
 
             // Form submission
             if (contactForm) {
@@ -761,6 +791,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.addEventListener('mouseleave', () => {
                     item.style.transform = 'translateX(0)';
                 });
->>>>>>> REPLACE
+            });
+        });
+    </script>
 </body>
 </html>
